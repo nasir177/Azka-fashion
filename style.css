@@ -8,16 +8,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(245, 245, 245, 0.95);
-    padding: 20px 50px;
-    position: relative;
+    background-color: rgba(245, 245, 245, 0.674);
+    padding: 20px 30px; /* Reduced padding for better alignment */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    width: 100%;
     backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 /* Left and Right Sections */
 .navbar-section {
     display: flex;
-    gap: 50px; /* space between links */
+    gap: 40px; /* Reduced gap for closer alignment to the logo */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* Center logo perfectly */
@@ -65,28 +72,34 @@ body {
 @media (max-width: 768px) {
     .navbar {
         display: flex;
-        flex-direction: column;
-        align-items: center; /* center all child elements */
-        padding: 20px;
-        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(245, 245, 245, 0.674);
+        padding: 15px 20px; /* Reduced padding for better alignment */
+        position: fixed; /* Keeps navbar fixed at the top */
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        z-index: 1000;
     }
 
     .navbar-section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin: 10px 0;
+        gap: 20px; /* Reduced gap for better spacing */
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .navbar-logo {
-        font-size: 24px;
+        font-size: 13px; /* Smaller font size for better fit */
         font-weight: bold;
-        margin: 15px 0;
+        margin: 10px 0;
     }
 
     .navbar a {
-        font-size: 14px;
+        font-size: 10px; /* Smaller text size for smoother logo display */
         text-decoration: none;
     }
 }
@@ -128,4 +141,66 @@ body {
   .video.tall {
     height: 500px;
   }
+  .brand-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    background-color: black; /* Optional for black background */
+  }
+ 
+
+  .brand-logos img {
+    width: 100px; /* Adjust as needed */
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  .brand-logos-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+   
+    background-color: black;
+  }
+  
+  .brand-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.07);
+  }
+  .container {
+    padding: 100px;
+    position: relative;
+    border: #ccc;
+  }
+  
+  .about-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .about-btn:hover {
+    background: black;
+    color: white;
+    border: #ccc;
+  }
+  
+  .scroll-text {
+    font-size: 48px;
+    font-weight: 400;
+    color: #ccc;
+    line-height: 1.2;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
   
