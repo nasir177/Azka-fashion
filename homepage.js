@@ -38,9 +38,14 @@ window.addEventListener("scroll", () => {
   // Clamp between 0 and 1
   visibility = Math.max(0, Math.min(1, visibility));
 
-  const grayLevel = Math.floor(204 - (204 * visibility)); // 204 = light gray #ccc
-  const fontWeight = 400 + Math.floor(300 * visibility); // up to 700
+ // const grayLevel = Math.floor(204 - (204 * visibility)); // 204 = light gray #ccc
+ // const fontWeight = 400 + Math.floor(300 * visibility); // up to 700
 
   text.style.color = `rgb(${grayLevel}, ${grayLevel}, ${grayLevel})`;
   text.style.fontWeight = fontWeight;
 });
+function selectImage(thumbnail) {
+  const allThumbnails = document.querySelectorAll('.thumbnail');
+  allThumbnails.forEach(thumb => thumb.classList.remove('selected'));
+  thumbnail.classList.add('selected');
+}
