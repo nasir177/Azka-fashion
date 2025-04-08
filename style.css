@@ -141,34 +141,42 @@ body {
   .video.tall {
     height: 500px;
   }
+
+  .brand-logos-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    background-color: black;
+    -webkit-overflow-scrolling: touch;
+  }
+  
   .brand-logos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    padding: 20px;
-    background-color: black; /* Optional for black background */
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 15px 10px;
   }
- 
-
+  
   .brand-logos img {
-    width: 100px; /* Adjust as needed */
+    width: 70px;
+    height: auto;
+    flex-shrink: 0;
     filter: grayscale(100%);
     transition: filter 0.5s ease, transform 0.3s ease;
     cursor: pointer;
-  }
-  .brand-logos-wrapper {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-   
-    background-color: black;
   }
   
   .brand-logos img:hover {
     filter: grayscale(0%);
     transform: scale(1.07);
   }
+  
+  /* Hide scrollbar (optional) */
+  .brand-logos-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
   .container {
     padding: 100px;
     position: relative;
@@ -222,15 +230,7 @@ body {
     text-align: center;
   }
 
-  .brand-logos {
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 15px 10px;
-  }
 
-  .brand-logos img {
-    width: 70px;
-  }
 
   .video-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
