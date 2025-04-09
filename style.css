@@ -230,8 +230,6 @@ body {
     text-align: center;
   }
 
-
-
   .video-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     padding: 10px;
