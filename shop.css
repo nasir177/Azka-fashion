@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .product-info {
+    padding: 15px;
+  }
+
+  .product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 8px;
+  }
+
+  .stars {
+    color: #ffc107;
+    margin-bottom: 5px;
+  }
+
+  .price {
+    font-size: 16px;
+    color: #28a745;
+  }
+
+  .price del {
+    color: gray;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .page-container {
+    padding-top: 80px; /* Adjust this value to push content lower */
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Responsive layout for small screens (mobile) */
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+    /* <-1,2,3,4,5,-> */
+    .main-container {
+        padding: 20px;
+      }
+      
+      
+      
+      /* Pagination Styles */
+      .pagination {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      
+      .pagination button {
+        background-color: #eee;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .pagination button.active {
+        border: 2px solid black;
+        background-color: #f1f1f1;
+      }
+      
+      .pagination button:hover {
+        background-color: #ddd;
+      }
+      
