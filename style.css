@@ -389,6 +389,30 @@ body {
   filter: grayscale(0%);
 }
 
+/* WhatsApp Floating Button */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  background-color: #07f25d;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+#whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hover Effect */
+#whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+
 
   
   
