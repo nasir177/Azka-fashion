@@ -382,7 +382,7 @@ body {
 .social-icons {
   display: flex;
   gap: 15px;
-  align-items: center;
+  align-items: right;
   margin-top: 10px;
 }
 
