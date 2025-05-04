@@ -49,3 +49,26 @@ function selectImage(thumbnail) {
   allThumbnails.forEach(thumb => thumb.classList.remove('selected'));
   thumbnail.classList.add('selected');
 }
+
+// login logic
+
+
+  const modal = document.getElementById('loginModal');
+  const btn = document.getElementById('loginBtn');
+  const span = document.querySelector('.close');
+
+  btn.onclick = () => {
+    modal.style.display = 'block';
+  }
+
+  span.onclick = () => {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = (e) => {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+

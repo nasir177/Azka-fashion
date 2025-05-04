@@ -4,10 +4,10 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000000;
+  background-color: #ffffff;
   margin: 0;
   padding: 20px;
-  color: #fff;
+  color: #000000;
 }
 
 .page-container {
@@ -132,17 +132,24 @@ body {
 }
 
 .action-buttons button.buy-now {
-  background-color: #ff9900;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid #000; /* This line adds the full border */
+  padding: 10px 20px; /* Optional: Add spacing */
+  border-radius: 4px; /* Optional: Rounded corners */
+  cursor: pointer;
 }
+
 
 .action-buttons button:hover {
   opacity: 0.9;
+  background: #1db954;
 }
 .cart-actions button, .buy-now {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #d33;
+  background: black;
   color: white;
   border: none;
   border-radius: 5px;
@@ -193,4 +200,23 @@ body {
 .pagination button:hover {
   background-color: #ddd;
 }
+
+.quantity-input {
+  width: 50px;
+  padding: 5px 8px;
+  border: 1px solid transparent; /* Removes border color */
+  border-radius: 8px;             /* Rounded corners */
+  font-size: 16px;
+  text-align: center;
+  background-color:rgb(17, 17, 17);      /* Light background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  outline: none;                  /* Removes blue border on focus */
+  transition: box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.quantity-input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* subtle focus ring */
+}
+
 

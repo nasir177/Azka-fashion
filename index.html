@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <!-- Left Side Links -->
-        <div class="navbar-section left">            
-            <a href="#HOME">HOME</a>
-            
-            <a href="shop.html">SHOP</a>
+  <header class="navbar">
+    <!-- Left Side Links -->
+    <div class="navbar-section left">
+      <a href="#HOME">HOME</a>
+      <a href="shop.html">SHOP</a>
+    </div>
+  
+    <!-- Centered Logo Text -->
+    <div class="navbar-logo">AZKA FASHION</div>
+  
+    <!-- Right Side: Login + Cart -->
+    <div class="navbar-section right">
+      <a href="about us.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+      
+      <!-- Icons Group -->
+      <div class="icon-group">
+        <div class="icon">
+            <img src="logoimg/login.png" alt="Login" id="loginBtn" />
         </div>
-
-        <!-- Centered Logo -->
-        <div class="navbar-logo">AZKA FASHION </div>
-
-        <!-- Right Side Links -->
-        <div class="navbar-section right">
-            <a href="about us.html">ABOUT US</a>
-            <a href="contact.html">CONTACT US</a>
+        <div class="icon">
+          <img src="logoimg/trolley.png" alt="Cart" />
         </div>
+      </div>
+    </div>
+  
+    
     </header>
      <!-- Video Grid Section -->
   <section class="video-grid">
@@ -95,7 +106,7 @@ for modern retailers around the world.
     <div class="footer-content">
   
       <div class="footer-section">
-        <h3>Useful Links</h3>
+        <h3>Information</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#">Collection</a></li>
@@ -143,6 +154,19 @@ for modern retailers around the world.
   <a href="https://wa.me/+91 8447943029" target="_blank" id="whatsapp-button">
     <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
   </a>
+
+  <!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Login</h2>
+    <input type="email" placeholder="Your email*" required />
+    <input type="password" placeholder="Password*" required />
+    <p><a href="#" style="color: rgb(128, 128, 128); text-decoration: none;">Forgot your password?</a></p>
+    <button class="primary-btn">Login</button>
+    <button class="secondary-btn">Create Account</button>
+  </div>
+</div>
   
   
   <script src="homepage.js"></script>
