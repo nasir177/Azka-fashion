@@ -78,38 +78,37 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(245, 245, 245, 0.674);
-        padding: 15px 20px; /* Reduced padding for better alignment */
-        position: fixed; /* Keeps navbar fixed at the top */
-        top: 0;
-        width: 100%;
-        backdrop-filter: blur(5px);
-        z-index: 1000;
-    }
+  .navbar {
+    display: flex;
+    justify-content: center; /* Center align the logo */
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.674);
+    padding: 15px 20px; /* Reduced padding for better alignment */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
 
-    .navbar-section {
-        display: flex;
-        gap: 20px; /* Reduced gap for better spacing */
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 100%;
-        overflow: hidden;
-    }
+  .navbar-section {
+    display: none; /* Hide other links for mobile view */
+  }
 
-    .navbar-logo {
-        font-size: 13px; /* Smaller font size for better fit */
-        font-weight: bold;
-        margin: 10px 0;
-    }
+  .navbar-logo {
+    font-size: 20px; /* Adjusted font size for better visibility */
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+  }
 
-    .navbar a {
-        font-size: 10px; /* Smaller text size for smoother logo display */
-        text-decoration: none;
-    }
+  .menu-btn {
+    display: block; /* Show hamburger only on mobile */
+    position: absolute;
+    right: 20px; /* Position hamburger on the right */
+    top: 15px; /* Adjust top position */
+    z-index: 1001; /* Ensure it stays above other elements */
+  }
 }
 
 
@@ -517,16 +516,7 @@ input {
   color: #222;
 }
 
-/* Desktop: show nav links, hide hamburger */
-.navbar-section {
-  display: flex;
-  gap: 15px;
-}
 
-.navbar-section a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
 
   /* Desktop: show nav links, hide hamburger */
   .navbar-section {
@@ -550,9 +540,11 @@ input {
   }
 
   .navbar-logo {
-    font-size: 25px; /* Adjusted font size for better visibility */
+    font-size: 28px; /* Revert to previous font size */
     font-weight: bold;
-    margin: 60; /* Center the logo */
     position: relative;
+    left: 20px; /* Align logo to the left */
+    transform: none; /* Remove centering transform */
+    text-align: left; /* Align text to the left */
   }
 }
