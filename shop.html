@@ -22,8 +22,41 @@
         <div class="navbar-section right">
             <a href="about us.html">ABOUT US</a>
             <a href="contact.html">CONTACT US</a>
+
+             <!-- Icons Group -->
+      <div class="icon-group">
+        <div class="icon">
+            <img src="logoimg/login.png" alt="Login" id="loginBtn" />
         </div>
+        <div class="icon">
+          <img src="logoimg/trolley.png" alt="Cart" />
+        </div>
+      </div>
+
+        </div>
+        
+
+         <!-- Hamburger (mobile only) -->
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+
     </header>
+
+      <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about us.html">ABOUT US</a>
+    <a href="contact.html">CONTACT US</a>
+     <!-- Icons Group -->
+     <div class="icon-group">
+        <div class="icon">
+          <img src="logoimg/login.png" alt="Login" id="loginBtn" />
+          <span id="loginBtn" style="cursor: pointer; margin-left: 5px; color: rgb(0, 0, 0); ">Login / Register</span>
+        </div>
+        </div>
+  </div>
+
+
     
     <div class="page-container">
         <h2 class="h2">OUR COLLECTION</h2>
@@ -221,6 +254,8 @@
       
 
     <script src="shop.js"></script>
+    <script src="homepage.js"></script>
+
 
     <script>
         function toggleCartActions(card) {

@@ -79,4 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-  
+  // sidebar logic
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }

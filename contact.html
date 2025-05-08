@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="navbar">
         <!-- Left Side Links -->
         <div class="navbar-section left">            
-            <a href="#HOME">HOME</a>
+            <a href="index.html">HOME</a>
             
-            <a href="#SHOP">SHOP</a>
+            <a href="shop.html">SHOP</a>
         </div>
 
         <!-- Centered Logo -->
@@ -20,10 +21,28 @@
 
         <!-- Right Side Links -->
         <div class="navbar-section right">
-            <a href="#ABOUT-US">ABOUT US</a>
+            <a href="about us.html">ABOUT US</a>
             <a href="contact.html">CONTACT US</a>
         </div>
+
+          <!-- Hamburger (mobile only) -->
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
     </header>
+
+     <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about us.html">ABOUT US</a>
+    <a href="contact.html">CONTACT US</a>
+     <!-- Icons Group -->
+     <div class="icon-group">
+        <div class="icon">
+          <img src="logoimg/login.png" alt="Login" id="loginBtn" />
+          <span id="loginBtn" style="cursor: pointer; margin-left: 5px; color: rgb(0, 0, 0); ">Login / Register</span>
+        </div>
+        </div>
+  </div>
 
     <section style="background-color: rgb(243, 241, 241); color: rgb(13, 13, 13); padding: 50px; text-align: center;">
         <h1 style="font-size: 3em; margin-bottom: 10px;">DROP US A LINE</h1>
@@ -128,6 +147,7 @@
           </div>
         </div>
       </footer>
+      <script src="homepage.js"></script>
       
 </body>
 </html>

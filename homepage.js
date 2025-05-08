@@ -71,4 +71,9 @@ function selectImage(thumbnail) {
     }
   }
 
+  //sidebar logic
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }
+
 

@@ -8,6 +8,8 @@
 </head>
 <body>
   <header class="navbar">
+
+
     <!-- Left Side Links -->
     <div class="navbar-section left">
       <a href="#HOME">HOME</a>
@@ -33,9 +35,27 @@
       </div>
     </div>
   
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
     
     </header>
-     <!-- Video Grid Section -->
+
+    <!-- SideBar -->
+
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about us.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+      <!-- Icons Group -->
+      <div class="icon-group">
+      <div class="icon">
+        <img src="logoimg/login.png" alt="Login" id="loginBtn" />
+        <span id="loginBtn" style="cursor: pointer; margin-left: 5px; color: rgb(0, 0, 0); ">Login / Register</span>
+      </div>
+      </div>
+    </div>
+
+    <!-- Video Grid Section -->
   <section class="video-grid">
     
     <video src="videos/video2.mp4" autoplay muted loop class="video video2"></video>
