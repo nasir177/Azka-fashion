@@ -10,7 +10,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(245, 245, 245, 0.674);
-  padding: 20px 0px; /* Remove left/right padding */
+  padding: 20px 0px;
   position: fixed;
   top: 0;
   left: 0; /* Ensure navbar starts at the very left */
@@ -22,7 +22,7 @@ body {
 }
 
 .navbar-section {
-  display: flex;
+  display: fixed;
   gap: 30px;
   align-items: center;
   margin-left: 30px; /* Add margin only to content, not navbar itself */
@@ -99,11 +99,23 @@ body {
   }
 
   .navbar-logo {
-    font-size: 20px; /* Adjusted font size for better visibility */
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
     position: relative;
     text-align: center;
   }
+  .logo img {
+  height: 80px; /* Adjust height */
+  width: auto;  /* Maintain aspect ratio */
+  object-fit: contain;
+}
+.logo {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
 
   .menu-btn {
     display: block; /* Show hamburger only on mobile */
@@ -279,15 +291,31 @@ body {
   height: 360px;
   border-radius: 10px;
   object-fit: cover;
-  cursor: pointer;
   transition: transform 0.5s, ;
 }
 
-.thumbnail:hover,
-.thumbnail.selected {
+.thumbnail:hover
+ {
   transform: scale(1.06);
   
   border: 2px solid white;
+
+}
+.product-price {
+  font-size: 1.2em;
+  color: #0b913c;
+  margin-top: 10px;
+}
+.product-price-collection {
+  font-size: 1.2em;
+  color: #e51b1b;
+  margin-top: 10px;
+}
+.product-title {
+    font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3em;
+  color: #000000;
+  margin-top: 10px;
 }
 
 ::-webkit-scrollbar {
