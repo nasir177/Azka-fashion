@@ -35,13 +35,14 @@
       </div>
     </div>
   
+   <!-- Hamburger (mobile only) -->
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-    
+
     </header>
 
-    <!-- SideBar -->
-
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
+      <span class="close-sidebar" id="closeSidebarBtn">&times;</span>
       <a href="index.html">HOME</a>
       <a href="shop.html">SHOP</a>
       <a href="about us.html">ABOUT US</a>
@@ -49,19 +50,32 @@
       <!-- Icons Group -->
       <div class="icon-group">
       <div class="icon">
-        <img src="logoimg/login.png" alt="Login" id="loginBtn" />
-        <span id="loginBtn" style="cursor: pointer; margin-left: 5px; color: rgb(0, 0, 0); ">Login / Register</span>
+        <!-- <img src="logoimg/login.png" alt="Login" class="loginBtn" /> -->
+        <a href="javascript:void(0)" id="loginBtn" class="loginBtn">Login/Register</a>
       </div>
       </div>
     </div>
 
-    <!-- Video Grid Section -->
-  <section class="video-grid">
+   
     
-    <video src="videos/video2.mp4" autoplay muted loop class="video video2"></video>
-    <video src="videos/video3.mp4" autoplay muted loop class="video video3"></video>
-    <video src="videos/video1.mp4" autoplay muted loop class="video video1"></video>
-    <video src="videos/video4.mp4" autoplay muted loop class="video video4"></video>
+
+    <section class="banner">
+      <div class="banner-track">
+          <img src="bannerimg/IMG-20250514-WA0007.jpg" alt="banner 1">
+          <img src="bannerimg/IMG-20250514-WA0008.jpg"  alt="banner 2">
+          <img src="bannerimg/IMG-20250514-WA0009.jpg" alt="banner 3">
+          <img src="bannerimg/IMG-20250514-WA0010.jpg" alt="banner 4">
+
+          
+      </div>
+      
+
+      <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+      </div>
   </section>
 
   <div class="brand-logos-wrapper">
@@ -79,7 +93,8 @@
   
 
   <div class="container">
-    <button class="about-btn">About Us</button>
+    <a href="about us.html" class="about-btn" >About us</a>
+    
   
     <h1 class="scroll-text" id="animatedText">
       Azka Fashion is a premium fabric design studio<br>
@@ -88,94 +103,105 @@ for modern retailers around the world.
     </h1>
   </div>
 
-  <div class="container">
-    <button class="about-btn">Collection</button>
+<div class="container">
+  <!-- <button class="about-btn">Collection</button> -->
+  <a href="shop.html" class="about-btn">New Arrivals</a>
 
+  <div class="thumbnail-row">
+    <img src="clothes/IMG-20250406-WA0106.jpg" class="thumbnail selected" onclick="selectImage(this)">
+    <img src="clothes/c1.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0107.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0108.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0109.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0110.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0111.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0112.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0113.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0114.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0115.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0116.jpg" class="thumbnail" onclick="selectImage(this)">
 
-    <div class="thumbnail-row">
-      <img src="clothes/IMG-20250406-WA0106.jpg" class="thumbnail selected" onclick="selectImage(this)">
-      <img src="clothes/c1.jpg" class="thumbnail" onclick="selectImage(this)">
-      <img src="clothes/IMG-20250406-WA0107.jpg" class="thumbnail" onclick="selectImage(this)">
-      <img src="clothes/IMG-20250406-WA0108.jpg" class="thumbnail" onclick="selectImage(this)">
-      <img src="clothes/IMG-20250406-WA0109.jpg" class="thumbnail" onclick="selectImage(this)">
-      <img src="clothes/IMG-20250406-WA0110.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0111.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0112.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0113.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0114.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0115.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0116.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0117.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0118.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250406-WA0119.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0149.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0150.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0151.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0151.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0152.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0154.jpg" class="thumbnail" onclick="selectImage(this)">
-     <img src="clothes/IMG-20250408-WA0156.jpg" class="thumbnail" onclick="selectImage(this)">
-
-    </div>
   </div>
+</div>
 
-  
+<div class="container">
+  <!-- <button class="about-btn">Collection</button> -->
+  <a href="shop.html" class="about-btn">Collection</a>
 
+  <div class="thumbnail-row">
+    <img src="clothes/IMG-20250406-WA0106.jpg" class="thumbnail selected" onclick="selectImage(this)">
+    <img src="clothes/c1.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0107.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0108.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0109.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0110.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0111.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0112.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0113.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0114.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0115.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0116.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0117.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0118.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250406-WA0119.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0149.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0150.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0151.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0151.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0152.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0154.jpg" class="thumbnail" onclick="selectImage(this)">
+    <img src="clothes/IMG-20250408-WA0156.jpg" class="thumbnail" onclick="selectImage(this)">
+  </div>
+</div>
 
-  <footer class="footer">
-    <div class="footer-content">
-  
-      <div class="footer-section">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Collection</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>Email: contact@example.com</p>
-        <p>Phone: +91 8447943029 </p>
-      </div>
-  
-      <div class="footer-section">
-        <h3>Developer</h3>
-        <p>Developed by <span class="dev-name">@nasir hussain</span></p>
-        <p>&copy; 2025 All rights reserved</p>
-      </div>
-  
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>Information</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Collection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </div>
 
     <div class="footer-section">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://wa.me/+91 8447943029" target="_blank">
-          <img src="logoimg/images-Photoroom.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank">
-          <img src="logoimg/fblogo.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank">
-          <img src="logoimg/instalogo.png" alt="Instagram">
-        </a>
-      </div>
+      <h3>Contact</h3>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +91 8447943029 </p>
     </div>
-    
-  </footer>
 
- <!-- <div style="height: 2000px; padding: 20px;">
-    <h1>Scroll down to see WhatsApp icon remain fixed!</h1>
-  </div>-->
+    <div class="footer-section">
+      <h3>Developer</h3>
+      <p>Developed by <span class="dev-name">@nasir hussain</span></p>
+      <p>&copy; 2025 All rights reserved</p>
+    </div>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/+91 8447943029" target="_blank" id="whatsapp-button">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
-  </a>
+  </div>
 
-  <!-- Login Modal -->
+  <div class="footer-section">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+      <a href="https://wa.me/+918447943029" target="_blank">
+        <img src="logoimg/images-Photoroom.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank">
+        <img src="logoimg/fblogo.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank">
+        <img src="logoimg/instalogo.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+  
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+918447943029" target="_blank" id="whatsapp-button">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -189,6 +215,9 @@ for modern retailers around the world.
 </div>
   
   
-  <script src="homepage.js"></script>
+  <script src="homepage.js"> </script>
+  <script src="shop.js">
+    
+  </script>
 </body> 
 </html>

@@ -81,5 +81,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // sidebar logic
   function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("open");
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("open");
   }
+
+  // Close sidebar button logic
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('closeSidebarBtn');
+    if (sidebar && closeBtn) {
+      closeBtn.onclick = function() {
+        sidebar.classList.remove("open");
+      };
+      // Optional: Hide sidebar by default
+      sidebar.classList.remove("open");
+    }
+  });
+
+  // shortby && filter logic 
+
+
+  
+  function toggleDropdown() {
+    const dropdown = document.getElementById('sort-options');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function selectSort(el) {
+    document.getElementById('selected-sort').textContent = el.textContent;
+    document.getElementById('sort-options').style.display = 'none';
+  }
+
+  window.addEventListener('click', function (e) {
+    const trigger = document.querySelector('.sort-trigger');
+    const dropdown = document.getElementById('sort-options');
+    if (!trigger.contains(e.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  function toggleFilter() {
+    const panel = document.getElementById("filterPanel");
+    const overlay = document.getElementById("filterOverlay");
+
+    panel.classList.toggle("active");
+    overlay.classList.toggle("active");
+  }
+

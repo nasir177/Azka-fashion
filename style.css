@@ -10,19 +10,22 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(245, 245, 245, 0.674);
-  padding: 20px 30px;
+  padding: 20px 0px; /* Remove left/right padding */
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0; /* Ensure navbar starts at the very left */
+  width: 100vw; /* Use viewport width to cover full width */
   backdrop-filter: blur(5px);
-  z-index: 1000;
+  z-index: 70; /* Fix z-index value */
   box-sizing: border-box;
+  margin: 0; /* Remove any default margin */
 }
 
 .navbar-section {
   display: flex;
   gap: 30px;
   align-items: center;
+  margin-left: 30px; /* Add margin only to content, not navbar itself */
 }
 
 .navbar-logo {
@@ -107,48 +110,12 @@ body {
     position: absolute;
     right: 20px; /* Position hamburger on the right */
     top: 15px; /* Adjust top position */
-    z-index: 1001; /* Ensure it stays above other elements */
+    z-index: 999; /* Ensure it stays above other elements */
   }
 }
 
 
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  /* Base video styling */
-  .video {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, border 0.3s ease;
-    border: 3px solid transparent;
-    border-radius: 10px;
-    background-color: #111;
-  }
-  
-  /* Hover Effect */
-  .video:hover {
-    transform: scale(1.07);
-    border-color: black;
-  }
-  
-  /* Height Variants for Visual Diversity */
-  .video.short {
-    height: 300px;
-  }
-  
-  .video.medium {
-    height: 400px;
-  }
-  
-  .video.tall {
-    height: 500px;
-  }
+/*  */
 
   .brand-logos-wrapper {
     overflow-x: auto;
@@ -195,6 +162,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    color : black;
+    text-decoration: none;
     margin: 40px;
     padding: 10px 20px;
     font-size: 16px;
@@ -238,7 +207,7 @@ body {
     text-align: center;
   }
 
-  .video-grid {
+  /* .video-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     padding: 10px;
     gap: 10px;
@@ -254,7 +223,7 @@ body {
 
   .video.tall {
     height: 260px;
-  }
+  } */
 
   .navbar {
     flex-direction: column;
@@ -306,19 +275,18 @@ body {
 
 .thumbnail {
   flex: 0 0 auto;
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 360px;
   border-radius: 10px;
   object-fit: cover;
-  opacity: 0.6;
   cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.5s, ;
 }
 
 .thumbnail:hover,
 .thumbnail.selected {
-  transform: scale(1.05);
-  opacity: 1;
+  transform: scale(1.06);
+  
   border: 2px solid white;
 }
 
@@ -498,7 +466,8 @@ input {
   color: rgb(0, 0, 0);
   padding-top: 60px;
   transition: right 0.3s ease; /* Transition for smooth sliding */
-  z-index: 999;
+  z-index: 1000; /* Ensure sidebar is above other content */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
 }
 
 .sidebar.open {
@@ -548,3 +517,62 @@ input {
     text-align: left; /* Align text to the left */
   }
 }
+
+/* Banner Slider */
+.banner {
+  margin-top: 80px; /* Adjust for fixed header */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  background: white;
+  padding: 10px 0;
+}
+
+.banner-track {
+  display: flex;
+  width: 200%;
+  animation: scrollBanner 10s linear infinite;
+}
+
+.banner-track img {
+  width: 33.33%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+@keyframes scrollBanner {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-33.33%); }
+  66% { transform: translateX(-66.66%); }
+}
+
+/* Banner Dots */
+.dots {
+  text-align: center;
+  padding: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: gray;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgb(0, 0, 0);
+}
+
+ .close-sidebar {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #333;
+      z-index: 1001;
+      }
