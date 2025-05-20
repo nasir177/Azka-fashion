@@ -70,19 +70,8 @@ window.addEventListener("scroll", () => {
       modal.style.display = 'none';
     }
   }
+//
 
-//   //sidebar logic
-//  // Toggle sidebar for mobile menu
-// function toggleSidebar() {
-//   const sidebar = document.getElementById('sidebar');
-//   sidebar.classList.toggle('active');
-// }
-
-// // Attach toggleSidebar to hamburger button
-// const hamburgerBtn = document.getElementById('menu-btn');
-// if (hamburgerBtn) {
-//   hamburgerBtn.addEventListener('click', toggleSidebar);
-// }
 
 
   // banner logic 

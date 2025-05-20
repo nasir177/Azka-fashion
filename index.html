@@ -1,246 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azka Fashion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title">Azka Fashion</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="navbar">
 
-
-    <!-- Left Side Links -->
-    <div class="navbar-section left">
-      <a href="#HOME">HOME</a>
-      <a href="shop.html">SHOP</a>
-    </div>
+  <!-- Left Side Links -->
+  <div class="navbar-section left">
+    <a href="index.html" data-i18n="nav.home">HOME</a>
+    <a href="shop.html" data-i18n="nav.shop">SHOP</a>
+  </div>
   
-    <!-- Centered Logo Image -->
-    <div class="logo">
-      <a href="index.html"></a>
-      <img src="logoimg/azkafashion_logo.png" alt="Azka Fashion Logo" style="height:48px;">
-      </a>
-    </div>
+  <!-- Centered Logo Image -->
+  <div class="logo">
+    <a href="index.html">
+    <img src="logoimg/azkafashion_logo.png" alt="Azka Fashion Logo" style="height:48px;">
+    </a>
+  </div>
   
-    <!-- Right Side: Login + Cart -->
-    <div class="navbar-section right">
-      <a href="about us.html">ABOUT US</a>
-      <a href="contact.html">CONTACT US</a>
-      
-      <!-- Icons Group -->
-      <div class="icon-group">
-        <div class="icon">
-            <img src="logoimg/login.png" alt="Login" id="loginBtn" />
-        </div>
-        <div class="icon">
-          <img src="logoimg/trolley.png" alt="Cart" />
-        </div>
-      </div>
+  <!-- Right Side: Login + Cart -->
+  <div class="navbar-section right">
+    <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+    <a href="contact.html" data-i18n="nav.contact">CONTACT US</a>
+    
+    <!-- Icons Group -->
+    <div class="icon-group">
+    <div class="icon">
+      <img src="logoimg/login.png" alt="Login" id="loginBtn" />
     </div>
+    <div class="icon">
+      <img src="logoimg/trolley.png" alt="Cart" />
+    </div>
+    </div>
+<div style=" margin-right: 23px;">
+    <select id="languageSwitcher">
+    <option value="en" data-i18n="lang.en">English</option>
+    <option value="ja" data-i18n="lang.ja">日本語</option>
+    </select>
+</div>
+  </div>
   
    <!-- Hamburger (mobile only) -->
-    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  <div class="menu-btn" onclick="toggleSidebar()" data-i18n="nav.menu">☰</div>
 
-    </header>
+  </header>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-      <span class="close-sidebar" id="closeSidebarBtn">&times;</span>
-      <a href="index.html">HOME</a>
-      <a href="shop.html">SHOP</a>
-      <a href="about us.html">ABOUT US</a>
-      <a href="contact.html">CONTACT US</a>
-      <!-- Icons Group -->
-      <div class="icon-group">
-      <div class="icon">
-        <!-- <img src="logoimg/login.png" alt="Login" class="loginBtn" /> -->
-        <a href="javascript:void(0)" id="loginBtn" class="loginBtn">Login/Register</a>
-      </div>
-      </div>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <span class="close-sidebar" id="closeSidebarBtn">&times;</span>
+    <a href="index.html" data-i18n="nav.home">HOME</a>
+    <a href="shop.html" data-i18n="nav.shop">SHOP</a>
+    <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+    <a href="contact.html" data-i18n="nav.contact">CONTACT US</a>
+    <!-- Icons Group -->
+    <div class="icon-group">
+    <div class="icon">
+      <a href="javascript:void(0)" id="sidebarLoginBtn" class="loginBtn" data-i18n="nav.login">Login/Register</a>
     </div>
+    </div>
+    <div style="margin-top: 12px; margin-left: 23px;">
+    <select id="sidebarLanguageSwitcher">
+      <option value="en" data-i18n="lang.en">English</option>
+      <option value="ja" data-i18n="lang.ja">日本語</option>
+    </select>
+    </div>
+  </div>
 
-   
-    
 
-    <section class="banner">
-      <div class="banner-track">
-          <img src="bannerimg/IMG-20250514-WA0007.jpg" alt="banner 1">
-          <img src="bannerimg/IMG-20250514-WA0008.jpg"  alt="banner 2">
-          <img src="bannerimg/IMG-20250514-WA0009.jpg" alt="banner 3">
-          <img src="bannerimg/IMG-20250514-WA0010.jpg" alt="banner 4">
-
-          
-      </div>
-      
-
-      <div class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-      </div>
+  <section class="banner">
+    <div class="banner-track">
+      <img src="bannerimg/IMG-20250514-WA0007.jpg" alt="banner 1">
+      <img src="bannerimg/IMG-20250514-WA0008.jpg"  alt="banner 2">
+      <img src="bannerimg/IMG-20250514-WA0009.jpg" alt="banner 3">
+      <img src="bannerimg/IMG-20250514-WA0010.jpg" alt="banner 4">
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </section>
 
   <div class="brand-logos-wrapper">
-    <div class="brand-logos" id="logoSlider">
-      <img src="logoimg/Fabindia_logo.svg" alt="FabIndia">
-      <img src="logoimg/allen_solly-Photoroom.png" alt="Allen Solly">
-      <img src="logoimg/biba.png" alt="Biba">
-      <img src="logoimg/zara-Photoroom.png" alt="Zara">
-      <img src="logoimg/forever21-Photoroom.png" alt="Forever 21">
-      <img src="logoimg/max-Photoroom.png" alt="Max">
-      <img src="logoimg/celvinkelin-Photoroom.png" alt="Calvin Klein">
-    </div>
+  <div class="brand-logos" id="logoSlider">
+    <img src="logoimg/Fabindia_logo.svg" alt="FabIndia">
+    <img src="logoimg/allen_solly-Photoroom.png" alt="Allen Solly">
+    <img src="logoimg/biba.png" alt="Biba">
+    <img src="logoimg/zara-Photoroom.png" alt="Zara">
+    <img src="logoimg/forever21-Photoroom.png" alt="Forever 21">
+    <img src="logoimg/max-Photoroom.png" alt="Max">
+    <img src="logoimg/celvinkelin-Photoroom.png" alt="Calvin Klein">
+  </div>
   </div>
   
-  
-
   <div class="container">
-    <a href="about us.html" class="about-btn" >About us</a>
-    
-  
-    <h1 class="scroll-text" id="animatedText">
-      Azka Fashion is a premium fabric design studio<br>
-crafting bespoke textiles and timeless styles<br>
-for modern retailers around the world.
-    </h1>
+  <a href="about us.html" class="about-btn" data-i18n="btn.about">About us</a>
+  <h1 class="scroll-text" id="animatedText" data-i18n="banner.description">
+    Azka Fashion is a premium fabric design studio<br>
+    crafting bespoke textiles and timeless styles<br>
+    for modern retailers around the world.
+  </h1>
   </div>
 
 <div class="container">
-  <!-- <button class="about-btn">Collection</button> -->
-  <a href="shop.html" class="about-btn">New Arrivals</a>
-
+  <a href="shop.html" class="about-btn" data-i18n="btn.newarrivals">New Arrivals</a>
   <div class="thumbnail-row">
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20802_1.jpg?v=1746197680&width=823" class="thumbnail selected" onclick="selectImage(this)">
-      <div class="product-title">LE PREMIER VOL-II</div>
-      <div class="product-price">₹8,500.00</div>
-    </div>
-   
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20797_1.jpg?v=1746197596&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">LE PREMIER VOL-II</div>
-      <div class="product-price">₹8,500.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20804_1.jpg?v=1746197607&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">LE PREMIER VOL-II</div>
-      <div class="product-price">₹8,500.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20801_1.jpg?v=1746197651&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">LE PREMIER VOL-II</div>
-      <div class="product-price">₹8,500.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20800_1.jpg?v=1746197642&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">LE PREMIER VOL-II</div>
-      <div class="product-price">₹8,500.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20759_1.jpg?v=1745311223&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">SUMMER GLORY</div>
-      <div class="product-price">₹5,950.00</div>
-    </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20802_1.jpg?v=1746197680&width=823" class="thumbnail selected" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.lepremier">LE PREMIER VOL-II</div>
+    <div class="product-price" data-i18n="product.price1">₹8,500.00</div>
   </div>
-
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20797_1.jpg?v=1746197596&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.lepremier">LE PREMIER VOL-II</div>
+    <div class="product-price" data-i18n="product.price1">₹8,500.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20804_1.jpg?v=1746197607&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.lepremier">LE PREMIER VOL-II</div>
+    <div class="product-price" data-i18n="product.price1">₹8,500.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20801_1.jpg?v=1746197651&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.lepremier">LE PREMIER VOL-II</div>
+    <div class="product-price" data-i18n="product.price1">₹8,500.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20800_1.jpg?v=1746197642&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.lepremier">LE PREMIER VOL-II</div>
+    <div class="product-price" data-i18n="product.price1">₹8,500.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20759_1.jpg?v=1745311223&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.summerglory">SUMMER GLORY</div>
+    <div class="product-price" data-i18n="product.price2">₹5,950.00</div>
+  </div>
   </div>
 </div>
 
 <div class="container">
-  <!-- <button class="about-btn">Collection</button> -->
-  <a href="shop.html" class="about-btn">Collection</a>
-
+  <a href="shop.html" class="about-btn" data-i18n="btn.collection">Collection</a>
   <div class="thumbnail-row">
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20419_1.jpg?v=1708506299&width=823" class="thumbnail selected" onclick="selectImage(this)">
-      <div class="product-title">BLISS LAWN 2024</div>
-      <div class="product-price-collection">₹4,400.00</div>
-    </div>
-
-     <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20520B_1.jpg?v=1719926189&width=823" class="thumbnail selected" onclick="selectImage(this)">
-      <div class="product-title">URBANE CHIFFON DUP</div>
-      <div class="product-price-collection">₹3,280.00</div>
-    </div>
-
-     <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20510A_1.jpg?v=1719926345&width=823" class="thumbnail selected" onclick="selectImage(this)">
-      <div class="product-title">URBANE CHIFFON DUP</div>
-      <div class="product-price-collection">₹3,280.00</div>
-    </div>
-   
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20490B_1.jpg?v=1719926571&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">URBANE CHIFFON DUP</div>
-      <div class="product-price-collection">₹3,280.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20490A_1.jpg?v=1719926596&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">URBANE CHIFFON DUP</div>
-      <div class="product-price-collection">₹3,280.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20468A_1.jpg?v=1719644971&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">Designer Suit</div>
-      <div class="product-price-collection">₹2,920.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20791A_1.jpg?v=1747298264&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">URBANE DIGITAL LAWN</div>
-      <div class="product-price">₹3,950.00</div>
-    </div>
-    <div class="product-card">
-      <img src="https://www.jadeonline.pk/cdn/shop/files/20794A_1.jpg?v=1747298357&width=823" class="thumbnail" onclick="selectImage(this)">
-      <div class="product-title">URBANE DIGITAL LAWN VOL</div>
-      <div class="product-price">₹3,950.00</div>
-    </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20419_1.jpg?v=1708506299&width=823" class="thumbnail selected" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.blisslawn">BLISS LAWN 2024</div>
+    <div class="product-price-collection" data-i18n="product.price3">₹4,400.00</div>
   </div>
-   
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20520B_1.jpg?v=1719926189&width=823" class="thumbnail selected" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanechiffon">URBANE CHIFFON DUP</div>
+    <div class="product-price-collection" data-i18n="product.price4">₹3,280.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20510A_1.jpg?v=1719926345&width=823" class="thumbnail selected" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanechiffon">URBANE CHIFFON DUP</div>
+    <div class="product-price-collection" data-i18n="product.price4">₹3,280.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20490B_1.jpg?v=1719926571&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanechiffon">URBANE CHIFFON DUP</div>
+    <div class="product-price-collection" data-i18n="product.price4">₹3,280.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20490A_1.jpg?v=1719926596&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanechiffon">URBANE CHIFFON DUP</div>
+    <div class="product-price-collection" data-i18n="product.price4">₹3,280.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20468A_1.jpg?v=1719644971&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.designersuit">Designer Suit</div>
+    <div class="product-price-collection" data-i18n="product.price5">₹2,920.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20791A_1.jpg?v=1747298264&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanedigitallawn">URBANE DIGITAL LAWN</div>
+    <div class="product-price-collection" data-i18n="product.price6">₹3,950.00</div>
+  </div>
+  <div class="product-card">
+    <img src="https://www.jadeonline.pk/cdn/shop/files/20794A_1.jpg?v=1747298357&width=823" class="thumbnail" onclick="selectImage(this)">
+    <div class="product-title" data-i18n="product.urbanedigitallawnvol">URBANE DIGITAL LAWN VOL</div>
+    <div class="product-price-collection" data-i18n="product.price6">₹3,950.00</div>
+  </div>
   </div>
 </div>
 
 <footer class="footer">
   <div class="footer-content">
 
-    <div class="footer-section">
-      <h3>Information</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Collection</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </div>
+  <div class="footer-section">
+    <h3 data-i18n="footer.info">Information</h3>
+    <ul>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="#" data-i18n="nav.collection">Collection</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="#" data-i18n="nav.about">About</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-section">
-      <h3>Contact</h3>
-      <p>Email: contact@example.com</p>
-      <p>Phone: +91 8447943029 </p>
-    </div>
+  <div class="footer-section">
+    <h3 data-i18n="footer.contact">Contact</h3>
+    <p data-i18n="footer.email">Email: contact@example.com</p>
+    <p data-i18n="footer.phone">Phone: +91 8447943029 </p>
+  </div>
 
-    <div class="footer-section">
-      <h3>Developer</h3>
-      <p>Developed by <span class="dev-name">@nasir hussain</span></p>
-      <p>&copy; 2025 All rights reserved</p>
-    </div>
+  <div class="footer-section">
+    <h3 data-i18n="footer.developer">Developer</h3>
+    <p data-i18n="footer.developedby">Developed by <span class="dev-name">@nasir hussain</span></p>
+    <p data-i18n="footer.copyright">&copy; 2025 All rights reserved</p>
+  </div>
 
   </div>
 
   <div class="footer-section">
-    <h3>Follow Us</h3>
-    <div class="social-icons">
-      <a href="https://wa.me/+918447943029" target="_blank">
-        <img src="logoimg/images-Photoroom.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank">
-        <img src="logoimg/fblogo.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank">
-        <img src="logoimg/instalogo.png" alt="Instagram">
-      </a>
-    </div>
+  <h3 data-i18n="footer.follow">Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://wa.me/+918447943029" target="_blank">
+    <img src="logoimg/images-Photoroom.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank">
+    <img src="logoimg/fblogo.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank">
+    <img src="logoimg/instalogo.png" alt="Instagram">
+    </a>
+  </div>
   </div>
   
 </footer>
@@ -251,20 +239,62 @@ for modern retailers around the world.
 </a>
 <div id="loginModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Login</h2>
-    <input type="email" placeholder="Your email*" required />
-    <input type="password" placeholder="Password*" required />
-    <p><a href="#" style="color: rgb(128, 128, 128); text-decoration: none;">Forgot your password?</a></p>
-    <button class="primary-btn">Login</button>
-    <button class="secondary-btn">Create Account</button>
+  <span class="close">&times;</span>
+  <h2 data-i18n="modal.login">Login</h2>
+  <input type="email" placeholder="Your email*" required data-i18n-placeholder="modal.email" />
+  <input type="password" placeholder="Password*" required data-i18n-placeholder="modal.password" />
+  <p><a href="#" style="color: rgb(128, 128, 128); text-decoration: none;" data-i18n="modal.forgot">Forgot your password?</a></p>
+  <button class="primary-btn" data-i18n="modal.loginbtn">Login</button>
+  <button class="secondary-btn" data-i18n="modal.createaccount">Create Account</button>
   </div>
 </div>
   
-  
   <script src="homepage.js"> </script>
-  <script src="shop.js">
-    
-  </script>
+  <script src="shop.js"></script>
+  <script src="lang.js"></script>
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      const translation = translations[lang][key];
+      if (translation) {
+        if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+          el.placeholder = translation;
+        } else {
+          el.innerHTML = translation;
+        }
+      }
+    });
+  }
+
+  // Main language switcher
+  document.getElementById("languageSwitcher").addEventListener("change", (e) => {
+    const selectedLang = e.target.value;
+    localStorage.setItem("language", selectedLang);
+    setLanguage(selectedLang);
+    // Sync sidebar switcher if exists
+    const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+    if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
+  });
+
+  // Sidebar language switcher
+  document.getElementById("sidebarLanguageSwitcher").addEventListener("change", (e) => {
+    const selectedLang = e.target.value;
+    localStorage.setItem("language", selectedLang);
+    setLanguage(selectedLang);
+    // Sync main switcher
+    document.getElementById("languageSwitcher").value = selectedLang;
+  });
+
+  // Set default language on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    const defaultLang = localStorage.getItem("language") || "en";
+    document.getElementById("languageSwitcher").value = defaultLang;
+    const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+    if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;
+    setLanguage(defaultLang);
+  });
+</script>
+
 </body> 
 </html>
