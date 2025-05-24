@@ -212,7 +212,7 @@
 
   // Set default language on page load
   window.addEventListener("DOMContentLoaded", () => {
-  const defaultLang = localStorage.getItem("language") || "en";
+ // const defaultLang = localStorage.getItem("language") || "en";
   document.getElementById("languageSwitcher").value = defaultLang;
   const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
   if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;

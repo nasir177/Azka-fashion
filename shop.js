@@ -135,45 +135,5 @@ function toggleSidebar() {
     overlay.classList.toggle("active");
   }
 
-   function setLanguage(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      const translation = translations[lang][key];
-      if (translation) {
-        if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
-          el.placeholder = translation;
-        } else {
-          el.innerHTML = translation;
-        }
-      }
-    });
-  }
-
-  // Main language switcher
-  document.getElementById("languageSwitcher").addEventListener("change", (e) => {
-    const selectedLang = e.target.value;
-    localStorage.setItem("language", selectedLang);
-    setLanguage(selectedLang);
-    // Sync sidebar switcher if exists
-    const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
-    if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
-  });
-
-  // Sidebar language switcher
-  document.getElementById("sidebarLanguageSwitcher").addEventListener("change", (e) => {
-    const selectedLang = e.target.value;
-    localStorage.setItem("language", selectedLang);
-    setLanguage(selectedLang);
-    // Sync main switcher
-    document.getElementById("languageSwitcher").value = selectedLang;
-  });
-
-  // Set default language on page load
-  window.addEventListener("DOMContentLoaded", () => {
-    const defaultLang = localStorage.getItem("language") || "en";
-    document.getElementById("languageSwitcher").value = defaultLang;
-    const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
-    if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;
-    setLanguage(defaultLang);
-  });
+  
 
