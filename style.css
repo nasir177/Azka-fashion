@@ -1,0 +1,606 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0.674);
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  left: 0; /* Ensure navbar starts at the very left */
+  width: 100vw; /* Use viewport width to cover full width */
+  backdrop-filter: blur(5px);
+  z-index: 70; /* Fix z-index value */
+  box-sizing: border-box;
+  margin: 0; /* Remove any default margin */
+}
+
+.navbar-section {
+  display: fixed;
+  gap: 30px;
+  align-items: center;
+  margin-left: 30px; /* Add margin only to content, not navbar itself */
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-weight: bold;
+  font-family: serif;
+  z-index: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+  margin-top: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+.navbar a:hover {
+  color: #3d3e3f;
+}
+
+.icon-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon img {
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center; /* Center align the logo */
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.674);
+    padding: 15px 20px; /* Reduced padding for better alignment */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
+
+  .navbar-section {
+    display: none; /* Hide other links for mobile view */
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    position: relative;
+    text-align: center;
+  }
+  .logo img {
+  height: 80px; /* Adjust height */
+  width: auto;  /* Maintain aspect ratio */
+  object-fit: contain;
+}
+.logo {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+
+  .menu-btn {
+    display: block; /* Show hamburger only on mobile */
+    position: absolute;
+    right: 20px; /* Position hamburger on the right */
+    top: 15px; /* Adjust top position */
+    z-index: 999; /* Ensure it stays above other elements */
+  }
+}
+
+
+/*  */
+
+  .brand-logos-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .brand-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 15px 10px;
+  }
+  
+  .brand-logos img {
+    width: 70px;
+    height: auto;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .brand-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.07);
+  }
+  
+  /* Hide scrollbar (optional) */
+  .brand-logos-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .container {
+    padding: 100px;
+    position: relative;
+    border: #ccc;
+  }
+  
+  .about-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color : black;
+    text-decoration: none;
+    margin: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .about-btn:hover {
+    background: black;
+    color: white;
+    border: #ccc;
+  }
+  
+  .scroll-text {
+    font-size: 48px;
+    font-weight: 400;
+    color: #111111;
+    line-height: 1.2;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+  }
+
+
+  /* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .about-btn {
+    margin: 20px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .scroll-text {
+    font-size: 28px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  /* .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .video.short {
+    height: 180px;
+  }
+
+  .video.medium {
+    height: 220px;
+  }
+
+  .video.tall {
+    height: 260px;
+  } */
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: flex-start;
+  }
+
+  .navbar-section {
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    position: center;
+    transform: none;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.collection-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.thumbnail {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 360px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.5s, ;
+}
+
+.thumbnail:hover
+ {
+  transform: scale(1.06);
+  
+  border: 2px solid white;
+
+}
+.product-price {
+  font-size: 1.2em;
+  color: #0b913c;
+  margin-top: 10px;
+}
+.product-price-collection {
+  font-size: 1.2em;
+  color: #e51b1b;
+  margin-top: 10px;
+}
+.product-title {
+    font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3em;
+  color: #000000;
+  margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.footer {
+  background-color: #e6e4e4;
+  color: #000000;
+  padding: 30px 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-section {
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #000000;
+}
+
+.dev-name {
+  color: #000000;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: right;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+ 
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* WhatsApp Floating Button */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  background-color: #07f25d;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+#whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Hover Effect */
+#whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+/* login button */
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* sidebar & hamburger */
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  color: rgb(0, 0, 0);
+  position: absolute;
+  right: 25px; /* Position the menu button on the right */
+  top: 20px; /* Adjust top position as needed */
+}
+
+.sidebar {
+  position: fixed;
+  right: -250px; /* Sidebar starts off-screen on the right */
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: rgba(245, 245, 245, 0.674);
+  color: rgb(0, 0, 0);
+  padding-top: 60px;
+  transition: right 0.3s ease; /* Transition for smooth sliding */
+  z-index: 1000; /* Ensure sidebar is above other content */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+}
+
+.sidebar.open {
+  right: 0; /* Sidebar slides in from the right */
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #222;
+}
+
+
+
+  /* Desktop: show nav links, hide hamburger */
+  .navbar-section {
+    display: flex;
+    gap: 15px;
+  }
+
+  .navbar-section a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar-section {
+    display: none; /* Hide other text and links */
+  }
+
+  .menu-btn {
+    display: block; /* Show hamburger only on mobile */
+  }
+
+  .navbar-logo {
+    font-size: 28px; /* Revert to previous font size */
+    font-weight: bold;
+    position: relative;
+    left: 20px; /* Align logo to the left */
+    transform: none; /* Remove centering transform */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+/* Banner Slider */
+.banner {
+  margin-top: 80px; /* Adjust for fixed header */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  background: white;
+  padding: 10px 0;
+}
+
+.banner-track {
+  display: flex;
+  width: 200%;
+  animation: scrollBanner 10s linear infinite;
+}
+
+.banner-track img {
+  width: 33.33%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+@keyframes scrollBanner {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-33.33%); }
+  66% { transform: translateX(-66.66%); }
+}
+
+/* Banner Dots */
+.dots {
+  text-align: center;
+  padding: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: gray;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgb(0, 0, 0);
+}
+
+ .close-sidebar {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #333;
+      z-index: 1001;
+      }

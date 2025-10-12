@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">About Azka Fashion | Manufacturer, Wholesaler & Designer Ethnic Wear</title>
+
+    <meta name="description" content="Azka Fashion is a leading manufacturer and wholesaler based in Delhi, specializing in high-quality Ready-to-Wear and Unstitched Indian Designer Suits and contemporary ethnic outfits.">
+    <meta name="keywords" content="Azka Fashion about, ethnic wear manufacturer, wholesale suits Delhi, ready-to-wear, unstitched suits, Indian designer wear, fashion brand philosophy">
+    
+    <link rel="canonical" href="https://nasir177.github.io/Azka-fashion/about%20us.html"> 
+
+    <meta property="og:title" content="About Azka Fashion: Your Trusted Ethnic Wear Partner">
+    <meta property="og:description" content="Learn about Azka Fashion's commitment to quality manufacturing and stylish, affordable ethnic wear delivered worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasir177.github.io/Azka-fashion/about%20us.html">
+    <meta property="og:image" content="https://nasir177.github.io/Azka-fashion/logoimg/azkafashion_logo.png">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["AboutPage", "Organization"],
+      "name": "Azka Fashion",
+      "url": "https://nasir177.github.io/Azka-fashion/about%20us.html",
+      "logo": "https://nasir177.github.io/Azka-fashion/logoimg/azkafashion_logo.png",
+      "description": "Manufacturer and Wholesaler of Ready-to-Wear and Unstitched Indian Designer Suits.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8447943029",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #ececec52;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 25px; /* Added spacing */
+        }
+        h2 {
+            margin-top: 30px;
+            color: #333333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        p {
+            margin: 15px 0; /* Increased margin for readability */
+            color: #333333; /* Slightly darker than black for prose */
+        }
+        /* Keeping basic navbar styles inline might conflict with style.css, 
+           but I've kept only the necessary styles you provided that were not in external files. 
+           Assuming .navbar, .logo, .menu-btn, .sidebar, etc., are primarily styled in style.css.
+        */
+        .navbar-section {
+            /* This section remains to override potential external styles if needed */
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .icon-group {
+             margin-top: 0; /* Adjusted for better navbar alignment */
+        }
+        /* Removed unnecessary/duplicate media queries and navbar styling here, 
+           relying on the external style.css and the existing layout logic. */
+    </style>
+</head>
+<body>
+    <header class="navbar">
+
+    <div class="navbar-section left">
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="shop.html" data-i18n="nav.shop" aria-label="Shop Azka Fashion Collections">SHOP</a>
+    </div>
+    
+    <div class="logo">
+        <a href="index.html" aria-label="Azka Fashion Home">
+            <img src="logoimg/azkafashion_logo.png" alt="Azka Fashion Official Logo" style="height:48px;">
+        </a>
+    </div>
+    
+    <div class="navbar-section right">
+        <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+        <a href="contact.html" data-i18n="nav.contact">CONTACT US</a>
+        
+        <div class="icon-group">
+            <div class="icon">
+                <img src="logoimg/login.png" alt="Login / My Account" id="loginBtn" />
+            </div>
+            <div class="icon">
+                <img src="logoimg/trolley.png" alt="Shopping Cart" />
+            </div>
+        </div>
+        <div style=" margin-right: 23px;">
+            <select id="languageSwitcher" aria-label="Language Selector">
+                <option value="en" data-i18n="lang.en">English</option>
+                <option value="ja" data-i18n="lang.ja">日本語</option>
+            </select>
+        </div>
+    </div>
+    
+        <div class="menu-btn" onclick="toggleSidebar()" data-i18n="nav.menu" role="button" aria-label="Toggle Mobile Menu">☰</div>
+
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <span class="close-sidebar" id="closeSidebarBtn">&times;</span>
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="shop.html" data-i18n="nav.shop">SHOP</a>
+        <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+        <a href="contact.html" data-i18n="nav.contact">CONTACT US</a>
+        <div class="icon-group">
+            <div class="icon">
+                <a href="javascript:void(0)" id="sidebarLoginBtn" class="loginBtn" data-i18n="nav.login">Login/Register</a>
+            </div>
+        </div>
+        <div style="margin-top: 12px; margin-left: 23px;">
+            <select id="sidebarLanguageSwitcher" aria-label="Sidebar Language Selector">
+                <option value="en" data-i18n="lang.en">English</option>
+                <option value="ja" data-i18n="lang.ja">日本語</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="container" role="main">
+        <h1 data-i18n="about.title">Our Story: Azka Fashion</h1>
+        
+        <p data-i18n="about.welcome">
+            Welcome to Azka Fashion! We are a dedicated **Manufacturer and Wholesaler** of premium Indian ethnic wear, based in **Delhi**. Our mission is to bring you the latest, trending outfits with a focus on quality, style, and affordability.
+        </p>
+
+        <h2 data-i18n="about.manufacturer_heading">Quality Manufacturing & Wholesale</h2>
+        <p data-i18n="about.manufacturer_content">
+            As a direct manufacturer, we maintain strict quality control over every piece we create, offering both **Ready-to-Wear** and **Unstitched Designer Suits**. This allows us to offer competitive wholesale pricing to retailers while ensuring our final customers receive exceptional value.
+        </p>
+        
+        <h2 data-i18n="about.vision_heading">Our Vision: Trending Outfits, Worldwide Reach</h2>
+        <p data-i18n="about.vision_content">
+            We believe that great fashion should be accessible to everyone. We constantly update our collections with the newest **Trending Outfits** and proudly offer **Shipping Worldwide**. Whether you're purchasing for your boutique or looking for your next perfect outfit, Azka Fashion ensures a seamless experience from production to delivery.
+        </p>
+
+        <h2 data-i18n="about.commitment_heading">Commitment to You</h2>
+        <p data-i18n="about.commitment_content">
+            Thank you for choosing Azka Fashion. Your satisfaction drives us. We look forward to being your trusted source for high-quality, fashionable ethnic and contemporary wear.
+        </p>
+
+        <p data-i18n="about.contact_cta" style="text-align: center; margin-top: 30px;">
+            <a href="contact.html" style="color: #000; text-decoration: underline; font-weight: bold;">Contact us</a> today to discuss wholesale opportunities or if you have any questions!
+        </p>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-i18n="footer.information">Information</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="shop.html">Collection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="shipping.html">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section newsletter-signup">
+                <h3>Get Exclusive Offers!</h3>
+                <p>Sign up to receive our latest catalog and offers.</p>
+                <form action="/subscribe" method="POST"> 
+                    <input type="email" placeholder="Your Email*" required aria-label="Email for Newsletter Signup">
+                    <button type="submit" class="primary-btn">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-section">
+                <h3 data-i18n="nav.contact">Contact & Address</h3>
+                <p data-i18n="footer.email">Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+                <p data-i18n="footer.phone">Phone: <a href="tel:+918447943029">+91 8447943029</a></p>
+                <p>Address: Zakir Nagar West, 110025</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <h3 data-i18n="footer.follow">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/+918447943029" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Azka Fashion">
+                        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon">
+                    </a>
+                    <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Facebook">
+                        <img src="logoimg/fblogo.png" alt="Facebook Social Media Icon">
+                    </a>
+                    <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Instagram">
+                        <img src="logoimg/instalogo.png" alt="Instagram Social Media Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footer.developedby">Developed by <span class="dev-name">@nasir hussain</span></p>
+            <p data-i18n="footer.copyright">&copy; <span id="currentYear">2025</span> All rights reserved</p>
+        </div>
+    </footer>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" style="color:black;" role="button" aria-label="Close Login Modal">&times;</span>
+            <h2 style="color: black;">Login</h2>
+            <input type="email" placeholder="Your email*" required aria-label="Email Address" />
+            <input type="password" placeholder="Password*" required aria-label="Password" />
+            <p><a href="#" style="color: grey; text-decoration: none;">Forgot your password?</a></p>
+            <button class="primary-btn">Login</button>
+            <button class="secondary-btn">Create Account</button>
+        </div>
+    </div>
+    
+    <script>
+        // Placeholder toggleSidebar function for mobile responsiveness
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar) {
+                // Use classList.toggle for modern responsive design (assuming class "open" exists in style.css)
+                sidebar.classList.toggle('open');
+                // Fallback for simple display property if class isn't used
+                // sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
+            }
+        }
+    </script>
+
+    <script src="lang.js"></script>
+    <script>
+        // Set current year on footer
+        window.addEventListener("DOMContentLoaded", () => {
+            const currentYearEl = document.getElementById('currentYear');
+            if(currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+        });
+        
+        // ** Language Switcher Logic (Copied from previous requests) **
+
+        function setLanguage(lang) {
+            // Need the translations object defined either globally or imported via lang.js
+            if(typeof translations === 'undefined') {
+                console.error("Translations object is not defined. Ensure lang.js is loaded.");
+                return;
+            }
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                const translation = translations[lang] ? translations[lang][key] : null;
+                
+                if (translation) {
+                    if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                        el.placeholder = translation;
+                    } else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+        }
+
+        // Initialize language switchers and set default language
+        window.addEventListener("DOMContentLoaded", () => {
+            const defaultLang = localStorage.getItem("language") || "en";
+            
+            const mainSwitcher = document.getElementById("languageSwitcher");
+            const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+            
+            if (mainSwitcher) {
+                mainSwitcher.value = defaultLang;
+                mainSwitcher.addEventListener("change", (e) => {
+                    const selectedLang = e.target.value;
+                    localStorage.setItem("language", selectedLang);
+                    setLanguage(selectedLang);
+                    if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
+                });
+            }
+
+            if (sidebarSwitcher) {
+                sidebarSwitcher.value = defaultLang;
+                sidebarSwitcher.addEventListener("change", (e) => {
+                    const selectedLang = e.target.value;
+                    localStorage.setItem("language", selectedLang);
+                    setLanguage(selectedLang);
+                    if (mainSwitcher) mainSwitcher.value = selectedLang;
+                });
+            }
+
+            // Set language on page load
+            setLanguage(defaultLang);
+        });
+    </script>
+</body>
+</html>

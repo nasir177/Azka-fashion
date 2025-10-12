@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.674);
+    padding: 20px 30px; /* Reduced padding for better alignment */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+/* Left and Right Sections */
+.navbar-section {
+    display: flex;
+    gap: 40px; /* Reduced gap for closer alignment to the logo */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Center logo perfectly */
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    font-family: serif;
+    z-index: 1;
+}
+
+/* Nav links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+/* Add underline effect on hover */
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin-top: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+.navbar a:hover {
+    color: #3d3e3f; /* Change color on hover */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(245, 245, 245, 0.674);
+        padding: 15px 20px; /* Reduced padding for better alignment */
+        position: fixed; /* Keeps navbar fixed at the top */
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+    }
+
+    .navbar-section {
+        display: flex;
+        gap: 20px; /* Reduced gap for better spacing */
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .navbar-logo {
+        font-size: 13px; /* Smaller font size for better fit */
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 10px; /* Smaller text size for smoother logo display */
+        text-decoration: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+        align-items: flex-start;
+      }
+    
+      .navbar-section {
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    
+      .navbar-logo {
+        position: center;
+        transform: none;
+        font-size: 20px;
+        margin: 10px 0;
+      }
+    
+      .navbar a {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }

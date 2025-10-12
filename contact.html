@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contact.title">Contact Azka Fashion | Wholesale Inquiry & Customer Support</title>
+    
+    <meta name="description" content="Contact Azka Fashion for wholesale inquiries, customer support, or questions about our designer suits and ethnic wear. Located in Zakir Nagar West, Delhi.">
+    <meta name="keywords" content="Azka Fashion contact, wholesale inquiry, designer suits customer service, Zakir Nagar, Delhi textile supplier">
+    
+    <link rel="canonical" href="https://nasir177.github.io/Azka-fashion/contact.html"> 
+
+    <meta property="og:title" content="Contact Azka Fashion: Wholesale & Support">
+    <meta property="og:description" content="Reach out to the Azka Fashion team. We handle B2B wholesale orders and provide dedicated customer support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasir177.github.io/Azka-fashion/contact.html">
+    <meta property="og:image" content="https://nasir177.github.io/Azka-fashion/logoimg/azkafashion_logo.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Azka Fashion Contact & Wholesale",
+      "url": "https://nasir177.github.io/Azka-fashion/contact.html",
+      "description": "Contact information and form for Azka Fashion, a Delhi-based ethnic wear manufacturer.",
+      "mainContentOfPage": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8447943029",
+        "contactType": "sales",
+        "email": "contact@example.com",
+        "areaServed": "World"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="navbar">
+
+    <div class="navbar-section left">
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="shop.html" data-i18n="nav.shop">SHOP</a>
+    </div>
+    
+    <div class="logo">
+        <a href="index.html" aria-label="Azka Fashion Home">
+            <img src="logoimg/azkafashion_logo.png" alt="Azka Fashion Official Logo" style="height:48px;">
+        </a>
+    </div>
+    
+    <div class="navbar-section right">
+        <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+        <a href="contact.html" data-i18n="nav.contact" aria-label="Current Page: Contact Us">CONTACT US</a>
+        
+        <div class="icon-group">
+            <div class="icon">
+                <img src="logoimg/login.png" alt="Login / My Account" id="loginBtn" data-i18n="nav.login" />
+            </div>
+            <div class="icon">
+                <img src="logoimg/trolley.png" alt="Shopping Cart" data-i18n="nav.cart" />
+            </div>
+        </div>
+    <div style=" margin-right: 23px;">
+        <select id="languageSwitcher" aria-label="Language Selector">
+            <option value="en" data-i18n="lang.en">English</option>
+            <option value="ja" data-i18n="lang.ja">日本語</option>
+        </select>
+    </div>
+    </div>
+    
+        <div class="menu-btn" onclick="toggleSidebar()" data-i18n="nav.menu" role="button" aria-label="Toggle Mobile Menu">☰</div>
+
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <span class="close-sidebar" id="closeSidebarBtn" data-i18n="sidebar.close">&times;</span>
+        <a href="index.html" data-i18n="nav.home">HOME</a>
+        <a href="shop.html" data-i18n="nav.shop">SHOP</a>
+        <a href="about us.html" data-i18n="nav.about">ABOUT US</a>
+        <a href="contact.html" data-i18n="nav.contact">CONTACT US</a>
+        <div class="icon-group">
+            <div class="icon">
+                <a href="javascript:void(0)" id="sidebarLoginBtn" class="loginBtn" data-i18n="nav.login">Login/Register</a>
+            </div>
+        </div>
+        <div style="margin-top: 12px; margin-left: 23px;">
+            <select id="sidebarLanguageSwitcher" aria-label="Sidebar Language Selector">
+                <option value="en" data-i18n="lang.en">English</option>
+                <option value="ja" data-i18n="lang.ja">日本語</option>
+            </select>
+        </div>
+    </div>
+
+
+    <section style="background-color: rgb(243, 241, 241); color: rgb(13, 13, 13); padding: 50px; text-align: center;"><br>
+        <h1 style="font-size: 3em; margin-bottom: 10px;" data-i18n="contact.dropaline">DROP US A LINE</h1>
+        <p style="margin-bottom: 30px;" data-i18n="contact.or">
+            or <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 0, 0); text-decoration: underline;" data-i18n="contact.messageinsta">message us on Instagram</a>
+        </p>
+        <form style="max-width: 800px; margin: 0 auto;" action="/submit-contact" method="POST">
+            <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                <input type="text" placeholder="Your Name" style="flex: 1; min-width: 200px; padding: 10px; font-size: 1em;" required data-i18n-placeholder="contact.name" aria-label="Your Name">
+                <input type="email" placeholder="Your Email" style="flex: 1; min-width: 200px; padding: 10px; font-size: 1em;" required data-i18n-placeholder="contact.email" aria-label="Your Email">
+                <input type="tel" placeholder="Your Number" style="flex: 1; min-width: 200px; padding: 10px; font-size: 1em;" data-i18n-placeholder="contact.number" aria-label="Your Phone Number">
+            </div>
+            <textarea placeholder="Your Inquiry / Wholesale Request" style="width: 100%; padding: 10px; font-size: 1em; height: 150px; margin-bottom: 20px;" data-i18n-placeholder="contact.story" aria-label="Your Inquiry or Wholesale Request"></textarea>
+            <button type="submit" style="padding: 10px 20px; font-size: 1em; background-color: rgb(14, 13, 13); color: rgb(242, 240, 240); border: none; cursor: pointer;" data-i18n="contact.submit">Submit</button>
+        </form>
+    </section>
+
+    
+    <section style="padding: 50px; text-align: center; background-color: #ffffff;">
+        <h2 style="font-size: 2.5em; margin-bottom: 50px; color: rgb(16, 17, 17);" data-i18n="contact.offer">OUR MANUFACTURING ADVANTAGES</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+            <div style="width: 250px; text-align: center;">
+                <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px;">
+                    <img src="https://www.jadeonline.pk/cdn/shop/files/20419_3.jpg?v=1708506299&width=823" alt="Quality Assured Indian Ethnic Suit" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <p style="color: rgb(11, 11, 11); font-size: 1.2em;">
+                    <strong data-i18n="contact.qualitytitle">Quality Assured</strong><br>
+                    <span data-i18n="contact.quality">
+                        Our products are made under strict quality control. As a manufacturer, we guarantee rigorous testing for all fabrics and finished goods.
+                    </span>
+                </p>
+            </div>
+        
+            <div style="width: 250px; text-align: center;">
+                <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px;">
+                    <img src="https://www.jadeonline.pk/cdn/shop/files/20520B_3..jpg?v=1720076682&width=823" alt="Ready-to-Wear and Unstitched Chiffon Fabric" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <p style="color: rgb(20, 20, 20); font-size: 1.2em;">
+                    <strong data-i18n="contact.bespoketitle">Ready-to-Wear & Unstitched</strong><br>
+                    <span data-i18n="contact.bespoke">
+                        We specialize in both fully tailored Ready-to-Wear and high-quality Unstitched Designer Suits, providing flexibility for retailers and customers.
+                    </span>
+                </p>
+            </div>
+        
+            <div style="width: 250px; text-align: center;">
+                <div style="width: 250px; height: 250px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px;">
+                    <img src="https://www.jadeonline.pk/cdn/shop/files/20490A_3..jpg?v=1720076876&width=823" alt="Worldwide Shipping Service" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                </div>
+                <p style="color: rgb(10, 10, 10); font-size: 1.2em;">
+                    <strong data-i18n="contact.servicetitle">Worldwide Shipping & Support</strong><br>
+                    <span data-i18n="contact.service">
+                        Our team ensures seamless order processing and support. We handle shipping worldwide to deliver the latest trends directly to you.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <footer style="background-color: #f0f0f0; padding: 40px 20px; color: rgb(12, 12, 12); font-family: Arial, sans-serif;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px;">
+            
+            <div style="flex: 1 1 300px;">
+                <img src="https://www.jadeonline.pk/cdn/shop/files/20801_3.1.jpg?v=1746197651&width=823" alt="Azka Fashion Model in Designer Suit" style="width: 100%; max-width: 300px; border-radius: 10px;" loading="lazy">
+            </div>
+        
+            <div style="flex: 2 1 400px; text-align: left;">
+                <h4 style="margin-bottom: 10px;" data-i18n="footer.menu">MENU</h4>
+                <nav style="font-size: 1.2em; margin-bottom: 20px;">
+                    <a href="index.html" style="margin-right: 20px; color: rgb(0, 0, 0); text-decoration: none;" data-i18n="nav.home">HOME</a>
+                    <a href="shop.html" style="margin-right: 20px; color: rgb(0, 0, 0); text-decoration: none;" data-i18n="nav.shop">SHOP</a>
+                    <a href="about us.html" style="color: rgb(0, 0, 0); text-decoration: none;" data-i18n="nav.about">About Us</a>
+                </nav>
+                <p>
+                    <a href="tel:+918447943029" style="color: rgb(0, 0, 0); text-decoration: underline;" data-i18n="footer.phone">+91 8447943029</a> 📞<br>
+                    <span style="font-size: 0.9em;">Zakir Nagar West, 110025</span> </p>
+            </div>
+        
+            <div style="flex: 1 1 200px; text-align: center;">
+                <div style="margin-bottom: 10px;">
+                    <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Facebook">
+                        <img src="logoimg/fblogo.png" alt="Facebook Social Icon" width="30">
+                    </a>
+                    <a href="https://wa.me/+918447943029" target="_blank" rel="noopener noreferrer" style="margin: 0 10px;" aria-label="WhatsApp Chat">
+                        <img src="logoimg/images-Photoroom.png" alt="WhatsApp Icon" width="30">
+                    </a>
+                    <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Instagram">
+                        <img src="logoimg/instalogo.png" alt="Instagram Social Icon" width="30">
+                    </a>
+                </div>
+                <p style="font-size: 0.9em;" data-i18n="footer.copyright">&copy; 2025 All rights reserved</p>
+                <p style="font-size: 0.9em;">
+                    <a href="#" style="color: rgb(0, 0, 0); text-decoration: none;" data-i18n="footer.privacy">Privacy Policy</a> |
+                    <a href="#" style="color: rgb(0, 0, 0); text-decoration: none;" data-i18n="footer.cookie">Cookie Policy</a>
+                </p>
+                <p style="margin-top: 10px;">
+                    <span data-i18n="footer.designby">Website Design by</span> <a href="https://instagram.com/_syed_nasir_hussain" target="_blank" style="color: rgb(0, 0, 0); font-weight: bold; text-decoration: underline;" data-i18n="footer.nasir">@nasir</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="shop.js"></script>
+    <script src="lang.js"></script>
+    
+    <script>
+        // Language Switcher Logic (Consistent with previous files)
+
+        function setLanguage(lang) {
+            // Assuming 'translations' object is defined in lang.js
+            if(typeof translations === 'undefined') {
+                console.error("Translations object is not defined. Ensure lang.js is loaded.");
+                return;
+            }
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                const translation = translations[lang] ? translations[lang][key] : null;
+
+                if (translation) {
+                    // Check for placeholder attribute translation
+                    if (el.hasAttribute('data-i18n-placeholder')) {
+                        el.placeholder = translation;
+                    } 
+                    // Check for input/textarea elements' placeholder
+                    else if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                        el.placeholder = translation;
+                    }
+                    // Default to innerHTML translation
+                    else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+        }
+
+        // Main language switcher listener
+        document.getElementById("languageSwitcher").addEventListener("change", (e) => {
+            const selectedLang = e.target.value;
+            localStorage.setItem("language", selectedLang);
+            setLanguage(selectedLang);
+            const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+            if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
+        });
+
+        // Sidebar language switcher listener
+        document.getElementById("sidebarLanguageSwitcher").addEventListener("change", (e) => {
+            const selectedLang = e.target.value;
+            localStorage.setItem("language", selectedLang);
+            setLanguage(selectedLang);
+            document.getElementById("languageSwitcher").value = selectedLang;
+        });
+
+        // Set default language on page load
+        window.addEventListener("DOMContentLoaded", () => {
+            // NOTE: 'defaultLang' needs to be defined globally or retrieved if not in the original scope.
+            const defaultLang = localStorage.getItem("language") || "en"; 
+            
+            const mainSwitcher = document.getElementById("languageSwitcher");
+            const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+            
+            if (mainSwitcher) mainSwitcher.value = defaultLang;
+            if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;
+            
+            // Set language after switchers are initialized
+            setLanguage(defaultLang);
+        });
+
+        // Sidebar toggle function (used in HTML header)
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar) {
+                sidebar.classList.toggle('open');
+            }
+        }
+    </script>
+</body>
+</html>

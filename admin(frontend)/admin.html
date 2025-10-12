@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azka Fashion - Admin Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 25px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload New Product</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="name">Product Name:</label>
+      <input type="text" name="name" required>
+
+      <label for="rating">Rating:</label>
+      <input type="number" name="rating" step="0.1" required>
+
+      <label for="ratingCount">Number of Ratings:</label>
+      <input type="number" name="ratingCount" required>
+
+      <label for="price">Price:</label>
+      <input type="number" name="price" step="0.01" required>
+
+      <label for="originalPrice">Original Price:</label>
+      <input type="number" name="originalPrice" step="0.01" required>
+
+      <label for="image">Product Image:</label>
+      <input type="file" name="image" accept="image/*" required>
+
+      <button type="submit">Upload Product</button>
+      <div class="message" id="messageBox"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("uploadForm").onsubmit = async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+
+      try {
+        const response = await fetch("http://localhost:8080/api/products", {
+
+          method: "POST",
+          body: formData
+        });
+
+        const msgBox = document.getElementById("messageBox");
+        if (response.ok) {
+          msgBox.textContent = "✅ Product uploaded successfully!";
+          msgBox.className = "message success";
+          this.reset(); // clear form
+        } else {
+          msgBox.textContent = "❌ Upload failed!";
+          msgBox.className = "message error";
+        }
+      } catch (err) {
+        const msgBox = document.getElementById("messageBox");
+        msgBox.textContent = "🚫 Failed to connect to server.";
+        msgBox.className = "message error";
+      }
+    };
+  </script>
+</body>
+</html>
+
+
