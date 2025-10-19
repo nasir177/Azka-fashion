@@ -39,13 +39,13 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding-top: 80px; /* Base padding to clear fixed header */
             background-color: #ffffff;
             color: #000000;
         }
         .container {
             max-width: 800px;
-            margin: 80px auto;
+            margin: 20px auto; /* Reduced top margin since padding is on body */
             padding: 20px;
             background: #ececec52;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -54,7 +54,7 @@
         h1 {
             text-align: center;
             color: #000000;
-            margin-bottom: 25px; /* Added spacing */
+            margin-bottom: 25px;
         }
         h2 {
             margin-top: 30px;
@@ -63,15 +63,10 @@
             padding-bottom: 5px;
         }
         p {
-            margin: 15px 0; /* Increased margin for readability */
-            color: #333333; /* Slightly darker than black for prose */
+            margin: 15px 0;
+            color: #333333;
         }
-        /* Keeping basic navbar styles inline might conflict with style.css, 
-           but I've kept only the necessary styles you provided that were not in external files. 
-           Assuming .navbar, .logo, .menu-btn, .sidebar, etc., are primarily styled in style.css.
-        */
         .navbar-section {
-            /* This section remains to override potential external styles if needed */
             display: flex;
             gap: 40px;
             flex-wrap: wrap;
@@ -80,10 +75,16 @@
             overflow: hidden;
         }
         .icon-group {
-             margin-top: 0; /* Adjusted for better navbar alignment */
+             margin-top: 0;
         }
-        /* Removed unnecessary/duplicate media queries and navbar styling here, 
-           relying on the external style.css and the existing layout logic. */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 60px; /* Adjust padding for smaller mobile header */
+            }
+            .container {
+                margin: 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,17 +149,17 @@
         <h1 data-i18n="about.title">Our Story: Azka Fashion</h1>
         
         <p data-i18n="about.welcome">
-            Welcome to Azka Fashion! We are a dedicated **Manufacturer and Wholesaler** of premium Indian ethnic wear, based in **Delhi**. Our mission is to bring you the latest, trending outfits with a focus on quality, style, and affordability.
+            Welcome to Azka Fashion! We are a dedicated Manufacturer and Wholesaler of premium Indian ethnic wear, based in Delhi. Our mission is to bring you the latest, trending outfits with a focus on quality, style, and affordability.
         </p>
 
         <h2 data-i18n="about.manufacturer_heading">Quality Manufacturing & Wholesale</h2>
         <p data-i18n="about.manufacturer_content">
-            As a direct manufacturer, we maintain strict quality control over every piece we create, offering both **Ready-to-Wear** and **Unstitched Designer Suits**. This allows us to offer competitive wholesale pricing to retailers while ensuring our final customers receive exceptional value.
+            As a direct manufacturer, we maintain strict quality control over every piece we create, offering both Ready-to-Wear and Unstitched Designer Suits. This allows us to offer competitive wholesale pricing to retailers while ensuring our final customers receive exceptional value.
         </p>
         
         <h2 data-i18n="about.vision_heading">Our Vision: Trending Outfits, Worldwide Reach</h2>
         <p data-i18n="about.vision_content">
-            We believe that great fashion should be accessible to everyone. We constantly update our collections with the newest **Trending Outfits** and proudly offer **Shipping Worldwide**. Whether you're purchasing for your boutique or looking for your next perfect outfit, Azka Fashion ensures a seamless experience from production to delivery.
+            We believe that great fashion should be accessible to everyone. We constantly update our collections with the newest Trending Outfits and proudly offer Shipping Worldwide. Whether you're purchasing for your boutique or looking for your next perfect outfit, Azka Fashion ensures a seamless experience from production to delivery.
         </p>
 
         <h2 data-i18n="about.commitment_heading">Commitment to You</h2>
@@ -241,8 +242,6 @@
             if (sidebar) {
                 // Use classList.toggle for modern responsive design (assuming class "open" exists in style.css)
                 sidebar.classList.toggle('open');
-                // Fallback for simple display property if class isn't used
-                // sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
             }
         }
     </script>

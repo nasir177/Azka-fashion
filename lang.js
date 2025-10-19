@@ -10,7 +10,7 @@ const translations = {
         "nav.login": "Login/Register",
         "nav.cart": "Cart",
         // UPDATED: Reflects Manufacturer/Retailer focus
-        "banner.description": "Discover the Latest **Designer Indian Suits** and<br>Exclusive **Ethnic Wear** Collections Online.<br>Style, Quality, and Tradition, delivered globally.",
+        "banner.description": "Discover the Latest Designer Indian Suits and<br>Exclusive Ethnic Wear Collections Online.<br>Style, Quality, and Tradition, delivered globally.",
         "btn.about": "About us",
         "btn.arrivals": "New Arrivals",
         "btn.newarrivals": "New Arrivals",

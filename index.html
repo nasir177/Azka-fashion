@@ -15,13 +15,34 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nasir177.github.io/Azka-fashion/index.html">
     <meta property="og:image" content="https://nasir177.github.io/Azka-fashion/logoimg/azkafashion_logo.png">
-    <meta property="og:site_name" content="Azka Fashion">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AzkaFashionSocial"> 
 
     <link rel="stylesheet" href="style.css">
     
+    <style>
+        /* ADDED SUBTLE TEXT SHINE/GRADIENT EFFECT FOR FASHION SITE FEEL */
+        .scroll-text {
+            /* Ensures strong tags render properly */
+            font-size: 2.1rem;
+            line-height: 1.35;
+            color: #333; 
+            
+            /* Background clip effect for the unique shine */
+            background: linear-gradient(45deg, #000, #333 40%, #ccc 50%, #333 60%, #000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Optional: Add a subtle text shadow for depth */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensure the animated text color changes in JS still work */
+        #animatedText {
+            transition: color 0.5s ease, font-weight 0.5s ease;
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -137,8 +158,8 @@
     <div class="container">
         <a href="about us.html" class="about-btn" data-i18n="btn.about">About us</a>
         <h1 class="scroll-text" id="animatedText" data-i18n="banner.description">
-            Discover the Latest Designer Indian Suits and<br>
-            Exclusive Ethnic Wear Collections Online.<br>
+            Discover the Latest \textbf{Designer Indian Suits} and<br>
+            Exclusive \textbf{Ethnic Wear} Collections Online.<br>
             Style, Quality, and Tradition, delivered globally.
         </h1>
     </div>
@@ -254,19 +275,19 @@
             <div class="product-card">
                 <a href="product_detail.html?name=Designer Suit&price=₹2,920.00&image=https://www.jadeonline.pk/cdn/shop/files/20468A_1.jpg?v=1719644971&width=823">
                     <img src="https://www.jadeonline.pk/cdn/shop/files/20468A_1.jpg?v=1719644971&width=823" class="thumbnail" alt="Affordable Designer Suit from Azka Fashion" loading="lazy">
-                    <div class="product-title" data-i18n="product.designersuit">Designer Suit</div>
+                    <div class="product-title">Designer Suit</div>
                     <div class="product-price-collection" data-i18n="product.price5">₹2,920.00</div>
             </div>
             <div class="product-card">
                 <a href="product_detail.html?name=URBANE DIGITAL LAWN&price=₹3,950.00&image=https://www.jadeonline.pk/cdn/shop/files/20791A_1.jpg?v=1747298264&width=823">
                     <img src="https://www.jadeonline.pk/cdn/shop/files/20791A_1.jpg?v=1747298264&width=823" class="thumbnail" alt="URBANE DIGITAL LAWN VOL 1 Ethnic Wear" loading="lazy">
-                    <div class="product-title" data-i18n="product.urbanedigitallawn">URBANE DIGITAL LAWN</div>
+                    <div class="product-title">URBANE DIGITAL LAWN</div>
                     <div class="product-price-collection" data-i18n="product.price6">₹3,950.00</div>
             </div>
             <div class="product-card">
                 <a href="product_detail.html?name=URBANE DIGITAL LAWN VOL&amp;price=₹3,950.00&amp;image=https://www.jadeonline.pk/cdn/shop/files/20794A_1.jpg?v=1747298357&amp;width=823">
                     <img src="https://www.jadeonline.pk/cdn/shop/files/20794A_1.jpg?v=1747298357&width=823" class="thumbnail" alt="URBANE DIGITAL LAWN VOL 2" loading="lazy">
-                    <div class="product-title" data-i18n="product.urbanedigitallawnvol">URBANE DIGITAL LAWN</div>
+                    <div class="product-title">URBANE DIGITAL LAWN</div>
                     <div class="product-price-collection" data-i18n="product.price6">₹3,950.00</div>
             </div>
         </div>
@@ -289,7 +310,7 @@
             
             <div class="footer-section newsletter-signup">
                 <h3>Stay Connected!</h3>
-                <p>Subscribe to our newsletter for **exclusive offers** and **new arrivals**.</p>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
                 <form action="/subscribe" method="POST"> <input type="email" placeholder="Enter your email" required aria-label="Email for Newsletter Signup">
                     <button type="submit" class="primary-btn">Subscribe</button>
                 </form>
