@@ -89,6 +89,7 @@
 
     
     <div class="page-container">
+        <!-- Changed to H1 for SEO consistency -->
         <h1 class="h2" data-i18n="collection.title">OUR COLLECTION</h1>
 
         <div class="toolbar-container">
@@ -160,6 +161,7 @@
         </div>
 
         <div class="product-grid" id="product-grid">
+            <!-- Product cards start here -->
             <div class="product-card" onclick="toggleCartActions(this)">
                 <div class="product-image">
                     <a href="product_detail.html?name=OMBRE%202025&price=₹8,900.00&image=https://www.jadeonline.pk/cdn/shop/files/20696_1.jpg?v=1737461097&width=823">
@@ -351,158 +353,132 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="product-card dummy-product" data-page="2">
-                <div class="product-image"><img src="https://via.placeholder.com/400x600/F0F0F0/000000?text=Page+2+Item+1" alt="Dummy Product Page 2" loading="lazy"></div>
-                <div class="product-info"><div class="product-title">Dummy Product 2.1</div><div class="price">₹4,000.00</div></div>
-            </div>
-            <div class="product-card dummy-product" data-page="2">
-                <div class="product-image"><img src="https://via.placeholder.com/400x600/F0F0F0/000000?text=Page+2+Item+2" alt="Dummy Product Page 2" loading="lazy"></div>
-                <div class="product-info"><div class="product-title">Dummy Product 2.2</div><div class="price">₹4,200.00</div></div>
-            </div>
-            <div class="product-card dummy-product" data-page="3">
-                <div class="product-image"><img src="https://via.placeholder.com/400x600/C0C0C0/000000?text=Page+3+Item+1" alt="Dummy Product Page 3" loading="lazy"></div>
-                <div class="product-info"><div class="product-title">Dummy Product 3.1</div><div class="price">₹5,100.00</div></div>
-            </div>
-            <div class="product-card dummy-product" data-page="4">
-                <div class="product-image"><img src="https://via.placeholder.com/400x600/A0A0A0/000000?text=Page+4+Item+1" alt="Dummy Product Page 4" loading="lazy"></div>
-                <div class="product-info"><div class="product-title">Dummy Product 4.1</div><div class="price">₹6,000.00</div></div>
-            </div>
-            <div class="product-card dummy-product" data-page="5">
-                <div class="product-image"><img src="https://via.placeholder.com/400x600/808080/000000?text=Page+5+Item+1" alt="Dummy Product Page 5" loading="lazy"></div>
-                <div class="product-info"><div class="product-title">Dummy Product 5.1</div><div class="price">₹7,000.00</div></div>
-            </div>
-            
-        </div>
-
-        <div class="pagination" role="navigation" aria-label="Pagination">
-            <button data-i18n="pagination.prev" class="pagination-btn" data-page="prev" aria-label="Previous Page">&larr;</button>
-            <button class="pagination-btn active" data-page="1" aria-label="Page 1">1</button>
-            <button class="pagination-btn" data-page="2" aria-label="Page 2">2</button>
-            <button class="pagination-btn" data-page="3" aria-label="Page 3">3</button>
-            <button class="pagination-btn" data-page="4" aria-label="Page 4">4</button>
-            <button class="pagination-btn" data-page="5" aria-label="Page 5">5</button>
-            <button data-i18n="pagination.next" class="pagination-btn" data-page="next" aria-label="Next Page">&rarr;</button>
         </div>
     </div>
     
-        <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 data-i18n="footer.information">Information</h3>
-                <ul>
-                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                    <li><a href="shop.html" data-i18n="footer.collection">Collection</a></li>
-                    <li><a href="contact.html" data-i18n="footer.contactus">Contact</a></li>
-                    <li><a href="about us.html" data-i18n="footer.about">About</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="shipping.html">Shipping & Returns</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section newsletter-signup">
-                <h3>Get Exclusive Offers!</h3>
-                <p>Sign up to receive 10% off your first order.</p>
-                <form action="/subscribe" method="POST"> 
-                    <input type="email" placeholder="Your Email*" required aria-label="Email for Newsletter Signup">
-                    <button type="submit" class="primary-btn">Subscribe</button>
-                </form>
-            </div>
+    <div class="pagination" role="navigation" aria-label="Pagination">
+        <button data-i18n="pagination.prev" class="pagination-btn" data-page="prev" aria-label="Previous Page">&larr;</button>
+        <button class="pagination-btn active" data-page="1" aria-label="Page 1">1</button>
+        <button class="pagination-btn" data-page="2" aria-label="Page 2">2</button>
+        <button class="pagination-btn" data-page="3" aria-label="Page 3">3</button>
+        <button class="pagination-btn" data-page="4" aria-label="Page 4">4</button>
+        <button class="pagination-btn" data-page="5" aria-label="Page 5">5</button>
+        <button data-i18n="pagination.next" class="pagination-btn" data-page="next" aria-label="Next Page">&rarr;</button>
+    </div>
+</div>
 
-            <div class="footer-section">
-                <h3 data-i18n="nav.contact">Contact & Address</h3>
-                <p data-i18n="footer.email">Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
-                <p data-i18n="footer.phone">Phone: <a href="tel:+918447943029">+91 8447943029</a></p>
-                <p>Address: Zakir Nagar West, 110025</p>
-            </div>
-
-            <div class="footer-section social-links">
-                <h3 data-i18n="footer.follow">Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://wa.me/+918447943029" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Azka Fashion">
-                        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon">
-                    </a>
-                    <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Facebook">
-                        <img src="logoimg/fblogo.png" alt="Facebook Social Media Icon">
-                    </a>
-                    <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Instagram">
-                        <img src="logoimg/instalogo.png" alt="Instagram Social Media Icon">
-                    </a>
-                </div>
-            </div>
+<footer class="footer" role="contentinfo">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 data-i18n="footer.info">Information</h3>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="shop.html" data-i18n="nav.collection">Collection</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="about us.html" data-i18n="nav.about">About</a></li>
+                <li><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a></li>
+                <li><a href="shipping.html" data-i18n="nav.shipping">Shipping & Returns</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section newsletter-signup">
+            <h3>Stay Connected!</h3>
+            <p>Subscribe to our newsletter for **exclusive offers** and **new arrivals**.</p>
+            <form action="/subscribe" method="POST"> <input type="email" placeholder="Enter your email" required aria-label="Email for Newsletter Signup">
+                <button type="submit" class="primary-btn">Subscribe</button>
+            </form>
         </div>
 
-        <div class="footer-bottom">
-            <p data-i18n="footer.developedby">Developed by <span class="dev-name">@nasir hussain</span></p>
-            <p data-i18n="footer.copyright">&copy; <span id="currentYear">2025</span> All rights reserved</p>
+        <div class="footer-section">
+            <h3 data-i18n="footer.contact">Contact & Address</h3>
+            <p data-i18n="footer.email">Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p data-i18n="footer.phone">Phone: <a href="tel:+918447943029">+91 8447943029</a></p>
+            <p>Address: Zakir Nagar West, 110025</p>
         </div>
-    </footer>
 
-    <a href="https://wa.me/+918447943029" target="_blank" id="whatsapp-button" rel="noopener noreferrer" aria-label="Chat with Azka Fashion on WhatsApp">
-        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat Button Icon" loading="lazy">
-    </a>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" style="color:black;" role="button" aria-label="Close Login Modal">&times;</span>
-            <h2 style="color: black;">Login</h2>
-            <input type="email" placeholder="Your email*" required aria-label="Email Address" />
-            <input type="password" placeholder="Password*" required aria-label="Password" />
-            <p><a href="#" style="color: grey; text-decoration: none;">Forgot your password?</a></p>
-            <button class="primary-btn">Login</button>
-            <button class="secondary-btn">Create Account</button>
+        <div class="footer-section social-links">
+            <h3 data-i18n="footer.follow">Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://wa.me/+918447943029" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Azka Fashion">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon">
+                </a>
+                <a href="https://www.facebook.com/people/Arsh-Afroz/pfbid02XnoHwhwDrReSfQhomXcmpMG44ScunQsY8v5HB857tbqSCkWGbbpC6kwRybjo6MkJl/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Facebook">
+                    <img src="logoimg/fblogo.png" alt="Facebook Social Media Icon">
+                </a>
+                <a href="https://www.instagram.com/fashionable_peoples_only_/" target="_blank" rel="noopener noreferrer" aria-label="Follow Azka Fashion on Instagram">
+                    <img src="logoimg/instalogo.png" alt="Instagram Social Media Icon">
+                </a>
+            </div>
         </div>
     </div>
-    
-    <script src="shop.js"></script>
-    <script src="lang.js"></script>
-    
-    <script>
-        function setLanguage(lang) {
-            document.querySelectorAll("[data-i18n]").forEach(el => {
-                const key = el.getAttribute("data-i18n");
-                // Assuming 'translations' is defined in lang.js or globally
-                const translation = translations[lang][key]; 
-                if (translation) {
-                    if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
-                        el.placeholder = translation;
-                    } else {
-                        el.innerHTML = translation;
-                    }
+
+    <div class="footer-bottom">
+        <p data-i18n="footer.developedby">Developed by <span class="dev-name">@nasir hussain</span></p>
+        <p data-i18n="footer.copyright">&copy; <span id="currentYear">2025</span> All rights reserved</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/+918447943029" target="_blank" id="whatsapp-button" rel="noopener noreferrer" aria-label="Chat with Azka Fashion on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat Button Icon" loading="lazy">
+</a>
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" role="button" aria-label="Close Login Modal">&times;</span>
+        <h2 data-i18n="modal.login">Login</h2>
+        <input type="email" placeholder="Your email*" required data-i18n-placeholder="modal.email" aria-label="Email Address" />
+        <input type="password" placeholder="Password*" required data-i18n-placeholder="modal.password" aria-label="Password" />
+        <p><a href="#" style="color: rgb(128, 128, 128); text-decoration: none;" data-i18n="modal.forgot">Forgot your password?</a></p>
+        <button class="primary-btn" data-i18n="modal.loginbtn">Login</button>
+        <button class="secondary-btn" data-i18n="modal.createaccount">Create Account</button>
+    </div>
+</div>
+
+<script src="shop.js"></script>
+<script src="lang.js"></script>
+
+<script>
+    function setLanguage(lang) {
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            const translation = translations[lang][key]; 
+            if (translation) {
+                if (el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea') {
+                    el.placeholder = translation;
+                } else {
+                    el.innerHTML = translation;
                 }
-            });
-        }
-
-        document.getElementById("languageSwitcher").addEventListener("change", (e) => {
-            const selectedLang = e.target.value;
-            localStorage.setItem("language", selectedLang);
-            setLanguage(selectedLang);
-            const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
-            if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
+            }
         });
+    }
 
-        document.getElementById("sidebarLanguageSwitcher").addEventListener("change", (e) => {
-            const selectedLang = e.target.value;
-            localStorage.setItem("language", selectedLang);
-            setLanguage(selectedLang);
-            document.getElementById("languageSwitcher").value = selectedLang;
-        });
+    document.getElementById("languageSwitcher").addEventListener("change", (e) => {
+        const selectedLang = e.target.value;
+        localStorage.setItem("language", selectedLang);
+        setLanguage(selectedLang);
+        const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+        if (sidebarSwitcher) sidebarSwitcher.value = selectedLang;
+    });
 
-        window.addEventListener("DOMContentLoaded", () => {
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            const defaultLang = localStorage.getItem("language") || "en"; 
-            
-            // Check if switchers exist before setting value
-            const mainSwitcher = document.getElementById("languageSwitcher");
-            const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
-            
-            if (mainSwitcher) mainSwitcher.value = defaultLang;
-            if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;
-            
-            // Set language after switchers are initialized
-            setLanguage(defaultLang);
-        });
-    </script>
-    
-</body>
+    document.getElementById("sidebarLanguageSwitcher").addEventListener("change", (e) => {
+        const selectedLang = e.target.value;
+        localStorage.setItem("language", selectedLang);
+        setLanguage(selectedLang);
+        document.getElementById("languageSwitcher").value = selectedLang;
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        const defaultLang = localStorage.getItem("language") || "en"; 
+        
+        const mainSwitcher = document.getElementById("languageSwitcher");
+        const sidebarSwitcher = document.getElementById("sidebarLanguageSwitcher");
+        
+        if (mainSwitcher) mainSwitcher.value = defaultLang;
+        if (sidebarSwitcher) sidebarSwitcher.value = defaultLang;
+        
+        setLanguage(defaultLang);
+    });
+</script>
+
+</body> 
 </html>

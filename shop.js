@@ -2,14 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // --- Product Card Interaction Logic ---
 
-    // Toggle cart actions visibility when card is clicked
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('click', toggleProductCardActive);
     });
 
     function toggleProductCardActive(event) {
-        // FIX: If the clicked element OR its parent is a link (<a>), ensure default navigation occurs.
+        // If the clicked element OR its parent is a link (<a>), allow default navigation to product_detail.html.
         if (event.target.closest('a')) {
             return; 
         }
@@ -19,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
         }
     }
+
+    // --- Login Modal, Quantity, Filter/Sort Logic ---
 
     // Add to Cart and Buy Now buttons logic
     const actionButtons = document.querySelectorAll('.cart-actions button');
@@ -31,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Item added to cart!');
             } else if (button.classList.contains('buy-now')) {
                 console.log('Buying now! Triggering Login Modal...');
-                document.getElementById("loginModal").style.display = "block";
+                // Assuming loginModal is defined globally or in index.html
+                const loginModal = document.getElementById("loginModal");
+                if (loginModal) loginModal.style.display = "block";
             }
         });
     });
@@ -100,55 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (sidebar) sidebar.classList.remove("open");
 
-    
-    // --- Pagination Logic ---
-    const productGrid = document.getElementById('product-grid');
-    const paginationButtons = document.querySelectorAll('.pagination-btn');
-    const totalPages = 5;
-
-    function showPage(pageNumber) {
-        // This is correct: it modifies the URL on the shop.html page
-        history.pushState(null, '', `shop.html?page=${pageNumber}`);
-
-        paginationButtons.forEach(btn => btn.classList.remove('active'));
-        const activeButton = document.querySelector(`.pagination-btn[data-page="${pageNumber}"]`);
-        if (activeButton) activeButton.classList.add('active');
-
-        productGrid.querySelectorAll('.product-card').forEach(card => {
-            const isDummy = card.classList.contains('dummy-product');
-            const cardPage = isDummy ? parseInt(card.getAttribute('data-page')) : 1;
-            
-            if (isDummy) {
-                card.style.display = (cardPage === pageNumber) ? 'block' : 'none';
-            } else {
-                card.style.display = (pageNumber === 1) ? 'block' : 'none';
-            }
-        });
-        
-        productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialPage = parseInt(urlParams.get('page')) || 1;
-    showPage(initialPage);
-
-    paginationButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            let target = this.getAttribute('data-page');
-            let currentPage = parseInt(document.querySelector('.pagination-btn.active').getAttribute('data-page'));
-            let newPage = currentPage;
-
-            if (target === 'next') {
-                newPage = Math.min(currentPage + 1, totalPages);
-            } else if (target === 'prev') {
-                newPage = Math.max(currentPage - 1, 1);
-            } else {
-                newPage = parseInt(target);
-            }
-            
-            showPage(newPage);
-        });
-    });
 
     // --- Filter/Sort Logic ---
 
