@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle cart actions visibility when card is clicked
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
-        // We ensure the link navigation takes priority over the class toggle
         card.addEventListener('click', toggleProductCardActive);
     });
 
     function toggleProductCardActive(event) {
-        // FIX: If the clicked element OR its parent is a link (<a>), prevent the custom card toggle
-        // and allow the browser to follow the link to product_detail.html.
+        // FIX: If the clicked element OR its parent is a link (<a>), ensure default navigation occurs.
         if (event.target.closest('a')) {
             return; 
         }
@@ -21,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
         }
     }
-
-    // --- Login Modal, Quantity, Sidebar, Pagination, Filter/Sort Logic (All Retained) ---
 
     // Add to Cart and Buy Now buttons logic
     const actionButtons = document.querySelectorAll('.cart-actions button');
@@ -111,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalPages = 5;
 
     function showPage(pageNumber) {
+        // This is correct: it modifies the URL on the shop.html page
         history.pushState(null, '', `shop.html?page=${pageNumber}`);
 
         paginationButtons.forEach(btn => btn.classList.remove('active'));
@@ -152,50 +149,51 @@ document.addEventListener('DOMContentLoaded', function() {
             showPage(newPage);
         });
     });
+
+    // --- Filter/Sort Logic ---
+
+    function toggleDropdown() {
+        const dropdown = document.getElementById('sort-options');
+        const trigger = document.querySelector('.sort-trigger');
+        const isVisible = dropdown.style.display === 'block';
+
+        dropdown.style.display = isVisible ? 'none' : 'block';
+        trigger.setAttribute('aria-expanded', !isVisible);
+    }
+
+    function selectSort(el) {
+        document.getElementById('selected-sort').textContent = el.textContent;
+        document.getElementById('sort-options').style.display = 'none';
+        document.querySelector('.sort-trigger').setAttribute('aria-expanded', 'false');
+        console.log('Sort changed to:', el.textContent);
+    }
+
+    window.addEventListener('click', function (e) {
+        const trigger = document.querySelector('.sort-trigger');
+        const dropdown = document.getElementById('sort-options');
+        if (trigger && dropdown && !trigger.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = 'none';
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    function toggleFilter() {
+        const panel = document.getElementById("filterPanel");
+        const overlay = document.getElementById("filterOverlay");
+        const isPanelActive = panel.classList.contains("active");
+
+        panel.classList.toggle("active");
+        overlay.classList.toggle("active");
+        panel.setAttribute('aria-hidden', isPanelActive);
+        console.log('Filter panel toggled.');
+    }
+
 });
 
-// Sidebar toggle function (can be called from HTML)
+// Sidebar toggle function (Needs to be global as it's called from HTML attribute)
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     if (sidebar) {
         sidebar.classList.toggle("open");
     }
-}
-
-// --- Filter/Sort Logic ---
-
-function toggleDropdown() {
-    const dropdown = document.getElementById('sort-options');
-    const trigger = document.querySelector('.sort-trigger');
-    const isVisible = dropdown.style.display === 'block';
-
-    dropdown.style.display = isVisible ? 'none' : 'block';
-    trigger.setAttribute('aria-expanded', !isVisible);
-}
-
-function selectSort(el) {
-    document.getElementById('selected-sort').textContent = el.textContent;
-    document.getElementById('sort-options').style.display = 'none';
-    document.querySelector('.sort-trigger').setAttribute('aria-expanded', 'false');
-    console.log('Sort changed to:', el.textContent);
-}
-
-window.addEventListener('click', function (e) {
-    const trigger = document.querySelector('.sort-trigger');
-    const dropdown = document.getElementById('sort-options');
-    if (trigger && dropdown && !trigger.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.style.display = 'none';
-        trigger.setAttribute('aria-expanded', 'false');
-    }
-});
-
-function toggleFilter() {
-    const panel = document.getElementById("filterPanel");
-    const overlay = document.getElementById("filterOverlay");
-    const isPanelActive = panel.classList.contains("active");
-
-    panel.classList.toggle("active");
-    overlay.classList.toggle("active");
-    panel.setAttribute('aria-hidden', isPanelActive);
-    console.log('Filter panel toggled.');
 }

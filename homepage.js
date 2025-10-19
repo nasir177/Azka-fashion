@@ -1,4 +1,4 @@
-// Function to toggle the mobile sidebar (Needs to be global)
+// Function to toggle the mobile sidebar (Needs to be global as it's called from HTML attribute)
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     if (sidebar) {
@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoSlider = document.getElementById("logoSlider");
 
     if (logoSlider) {
+        // Ensure seamless looping by duplicating content
         const logoSliderContent = logoSlider.innerHTML;
         logoSlider.innerHTML += logoSliderContent; 
 
         let scrollAmount = 0;
         let isPaused = false;
-        const speed = 1; 
+        const speed = 1; // Pixels per frame
 
+        // Pause on hover
         logoSlider.addEventListener("mouseenter", () => isPaused = true);
         logoSlider.addEventListener("mouseleave", () => isPaused = false);
 
@@ -26,10 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollAmount -= speed;
                 logoSlider.style.transform = `translateX(${scrollAmount}px)`;
 
+                // When the first full set of logos has scrolled off-screen, reset the scroll position instantly
                 if (Math.abs(scrollAmount) >= logoSlider.scrollWidth / 2) {
                     scrollAmount = 0;
                 }
             }
+
             requestAnimationFrame(animateLogos);
         }
         animateLogos();
