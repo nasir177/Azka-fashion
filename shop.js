@@ -5,17 +5,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle cart actions visibility when card is clicked
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
-        // Prevent event listener from attaching twice (it's also in the HTML onclick)
-        card.removeEventListener('click', toggleProductCardActive); 
+        // We ensure the link navigation takes priority over the class toggle
         card.addEventListener('click', toggleProductCardActive);
     });
 
     function toggleProductCardActive(event) {
-        // Only toggle if the click isn't on an internal button/link
-        if (!event.target.closest('.cart-actions') && !event.target.closest('a')) {
+        // FIX: If the clicked element OR its parent is a link (<a>), prevent the custom card toggle
+        // and allow the browser to follow the link to product_detail.html.
+        if (event.target.closest('a')) {
+            return; 
+        }
+
+        // Only toggle cart actions if the click is not on the link/button itself
+        if (!event.target.closest('.cart-actions')) {
             this.classList.toggle('active');
         }
     }
+
+    // --- Login Modal, Quantity, Sidebar, Pagination, Filter/Sort Logic (All Retained) ---
 
     // Add to Cart and Buy Now buttons logic
     const actionButtons = document.querySelectorAll('.cart-actions button');
@@ -26,11 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (button.classList.contains('add-to-cart')) {
                 console.log('Item added to cart!');
-                // Add Google Analytics/GTM event for AddToCart
-                // Example: dataLayer.push({ 'event': 'addToCart', 'productName': '...' });
             } else if (button.classList.contains('buy-now')) {
                 console.log('Buying now! Triggering Login Modal...');
-                // You might want to remove this if you integrate actual checkout
                 document.getElementById("loginModal").style.display = "block";
             }
         });
@@ -98,53 +102,39 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.remove("open");
         };
     }
-    // Ensure sidebar is closed on initial load for safety
     if (sidebar) sidebar.classList.remove("open");
 
     
-    // --- Pagination Logic (New Feature) ---
-    
+    // --- Pagination Logic ---
     const productGrid = document.getElementById('product-grid');
     const paginationButtons = document.querySelectorAll('.pagination-btn');
     const totalPages = 5;
 
-    // Function to hide all products and show only the products for the current page
     function showPage(pageNumber) {
-        // Update URL to reflect the current page for better SEO/tracking
         history.pushState(null, '', `shop.html?page=${pageNumber}`);
 
-        // 1. Update active pagination button
         paginationButtons.forEach(btn => btn.classList.remove('active'));
         const activeButton = document.querySelector(`.pagination-btn[data-page="${pageNumber}"]`);
         if (activeButton) activeButton.classList.add('active');
 
-        // 2. Control Product Visibility
         productGrid.querySelectorAll('.product-card').forEach(card => {
             const isDummy = card.classList.contains('dummy-product');
             const cardPage = isDummy ? parseInt(card.getAttribute('data-page')) : 1;
             
             if (isDummy) {
-                // For dummy products, hide all pages except the active one
                 card.style.display = (cardPage === pageNumber) ? 'block' : 'none';
             } else {
-                // For hardcoded products (the real ones), they appear only on page 1
                 card.style.display = (pageNumber === 1) ? 'block' : 'none';
             }
         });
         
-        // Scroll to top of the product grid for better UX
         productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        // Add Google Analytics event for page view
-        // Example: dataLayer.push({ 'event': 'virtualPageview', 'virtualPageUrl': `/shop/page/${pageNumber}` });
     }
 
-    // Handle initial load based on URL or default to page 1
     const urlParams = new URLSearchParams(window.location.search);
     const initialPage = parseInt(urlParams.get('page')) || 1;
     showPage(initialPage);
 
-    // Add event listeners to pagination buttons
     paginationButtons.forEach(button => {
         button.addEventListener('click', function() {
             let target = this.getAttribute('data-page');
@@ -164,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Sidebar toggle function (used in HTML header)
+// Sidebar toggle function (can be called from HTML)
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     if (sidebar) {
@@ -187,11 +177,9 @@ function selectSort(el) {
     document.getElementById('selected-sort').textContent = el.textContent;
     document.getElementById('sort-options').style.display = 'none';
     document.querySelector('.sort-trigger').setAttribute('aria-expanded', 'false');
-    // Digital Marketing: Trigger sort event for tracking
     console.log('Sort changed to:', el.textContent);
 }
 
-// Close sort dropdown when clicking outside
 window.addEventListener('click', function (e) {
     const trigger = document.querySelector('.sort-trigger');
     const dropdown = document.getElementById('sort-options');
@@ -209,7 +197,5 @@ function toggleFilter() {
     panel.classList.toggle("active");
     overlay.classList.toggle("active");
     panel.setAttribute('aria-hidden', isPanelActive);
-
-    // Digital Marketing: Log filter interaction
     console.log('Filter panel toggled.');
 }
